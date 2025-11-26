@@ -7,8 +7,8 @@ const posSystemsUAE = [
   { name: "BIMPOS", category: "Live" },
   { name: "Cibo", category: "Live" },
   { name: "Datamate/Hotsoft Purple Key", category: "Live" },
-  { name: "Dineplan", category: "Live" },
   { name: "Dgtera", category: "Live" },
+  { name: "Dineplan", category: "Live" },
   { name: "Foodics", category: "Live" },
   { name: "ForkPOS", category: "Live" },
   { name: "Fodista", category: "Live" },
@@ -18,12 +18,22 @@ const posSystemsUAE = [
   { name: "Micros Oracle Symphony Gen 2", category: "Live" },
   { name: "NCR BSL", category: "Live" },
   { name: "Nuba Soft", category: "Live" },
+  { name: "Ocim", category: "Upcoming" },
   { name: "OMAK POS", category: "Live" },
   { name: "OMEGA POS Technology", category: "Live" },
   { name: "Polaris Technology", category: "Live" },
   { name: "PosBytz", category: "Live" },
   { name: "Posify", category: "Live" },
   { name: "Prologic", category: "Live" },
+  { name: "Rancelab", category: "Live" },
+  { name: "Revel", category: "Live" },
+  { name: "Sahlhub", category: "Live" },
+  { name: "Sapaad", category: "Live" },
+  { name: "Spotlight", category: "Live" },
+  { name: "Squirrel", category: "Live" },
+  { name: "Syrve", category: "Live" },
+  { name: "Thinksoftwares", category: "Live" },
+  { name: "TMBill", category: "Live" },
 ];
 
 export default function POSIntegrations() {
@@ -63,11 +73,11 @@ export default function POSIntegrations() {
         <div className="text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
             <span className="text-lg font-semibold text-primary">
-              22+ Live Integrations
+              32 POS Integrations
             </span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">
-              Ready to connect today
+              31 Live + 1 Upcoming
             </span>
           </div>
         </div>

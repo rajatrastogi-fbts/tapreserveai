@@ -6,7 +6,7 @@ const mockScreens = [
   {
     icon: QrCode,
     title: "Table QR Code",
-    description: "Elegant table tent with MenuFlow QR code",
+    description: "Elegant table tent with TapReserve.AI QR code",
   },
   {
     icon: Smartphone,
@@ -26,7 +26,7 @@ export default function DemoSlide() {
       <div className="space-y-12 text-center">
         <div className="space-y-4">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground">
-            See MenuFlow in Action
+            See TapReserve.AI in Action
           </h2>
           <p className="text-2xl text-muted-foreground">
             A Glimpse into the Future

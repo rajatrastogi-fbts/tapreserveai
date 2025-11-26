@@ -14,9 +14,6 @@ export default function TitleSlide() {
         <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto pt-4">
           Revolutionizing Restaurant Operations with Seamless Self-Ordering
         </p>
-        <div className="pt-8 text-lg text-white/80">
-          [Presenter Name] | [Date]
-        </div>
       </div>
     </SlideLayout>
   );

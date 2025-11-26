@@ -25,7 +25,7 @@ export default function Testimonials() {
             </div>
 
             <blockquote className="text-2xl md:text-3xl leading-relaxed text-center font-light">
-              MenuFlow helped us increase our Friday night turnover by{" "}
+              TapReserve.AI helped us increase our Friday night turnover by{" "}
               <strong className="font-bold">30%</strong>. Our servers are less stressed 
               and can now focus on providing exceptional service. It's a{" "}
               <strong className="font-bold">game-changer</strong>.

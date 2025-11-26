@@ -20,7 +20,7 @@ export default function SolutionIntro() {
             
             <div className="space-y-4 text-xl text-white/90">
               <p>
-                <strong>MenuFlow</strong> is an end-to-end self-ordering and payment
+                <strong>TapReserve.AI</strong> is an end-to-end self-ordering and payment
                 platform accessible via any smartphone.
               </p>
               <p className="text-2xl font-semibold">

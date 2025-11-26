@@ -7,7 +7,7 @@ const nextSteps = [
   {
     icon: Calendar,
     title: "Schedule a Demo",
-    description: "See MenuFlow in action with a personalized walkthrough",
+    description: "See TapReserve.AI in action with a personalized walkthrough",
   },
   {
     icon: Zap,
@@ -30,7 +30,7 @@ export default function CallToAction() {
             The Future is Contactless.
             <br />
             <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              The Future is MenuFlow.
+              The Future is TapReserve.AI.
             </span>
           </h2>
           <p className="text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto">
@@ -78,11 +78,11 @@ export default function CallToAction() {
             <div className="flex flex-wrap justify-center gap-6 text-white/90">
               <div className="flex items-center gap-2">
                 <Globe className="w-5 h-5" />
-                <span>menuflow.ai</span>
+                <span>tapreserve.ai</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-5 h-5" />
-                <span>hello@menuflow.ai</span>
+                <span>hello@tapreserve.ai</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -93,7 +93,7 @@ export default function CallToAction() {
 
           <p className="text-lg text-white/80 max-w-4xl mx-auto pt-4">
             The shift to digital, contactless experiences is not a trend; it's the new standard. 
-            With MenuFlow, you're not just keeping up; <strong className="text-white">you're leaping ahead</strong>.
+            With TapReserve.AI, you're not just keeping up; <strong className="text-white">you're leaping ahead</strong>.
           </p>
         </div>
       </div>

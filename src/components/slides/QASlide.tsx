@@ -21,16 +21,16 @@ export default function QASlide() {
 
         <div className="pt-12 space-y-8">
           <div className="text-8xl md:text-9xl font-bold text-white/10">
-            MenuFlow
+            TapReserve.AI
           </div>
           
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 max-w-2xl mx-auto">
             <div className="space-y-4">
               <div className="text-xl">Contact Us</div>
-              <div className="text-3xl font-bold">hello@menuflow.ai</div>
+              <div className="text-3xl font-bold">hello@tapreserve.ai</div>
               <div className="text-xl">+1 (555) 123-4567</div>
               <div className="text-xl text-white/80 pt-4">
-                menuflow.ai
+                tapreserve.ai
               </div>
             </div>
           </div>

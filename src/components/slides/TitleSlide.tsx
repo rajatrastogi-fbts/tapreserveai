@@ -6,7 +6,7 @@ export default function TitleSlide() {
     <SlideLayout background="image" backgroundImage={heroImage}>
       <div className="text-center text-white space-y-6 animate-slide-up">
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight">
-          MenuFlow
+          TapReserve.AI
         </h1>
         <p className="text-2xl md:text-3xl lg:text-4xl font-light max-w-4xl mx-auto">
           The Future of Dining is Here

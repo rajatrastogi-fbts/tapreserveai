@@ -1,18 +1,28 @@
 import SlideLayout from "./SlideLayout";
-import { CheckCircle2 } from "lucide-react";
+import pos3s from "@/assets/pos-logos/3spos.webp";
+import amepos from "@/assets/pos-logos/amepos.png";
+import bimpos from "@/assets/pos-logos/bimpos.png";
+import cibo from "@/assets/pos-logos/cibo.webp";
+import datamate from "@/assets/pos-logos/datamate.webp";
+import dgtera from "@/assets/pos-logos/dgtera.png";
+import dineplan from "@/assets/pos-logos/dineplan.webp";
+import foodics from "@/assets/pos-logos/foodics.png";
+import forkpos from "@/assets/pos-logos/forkpos.png";
+import fodista from "@/assets/pos-logos/fodista.png";
+import g5pos from "@/assets/pos-logos/g5pos.webp";
 
 const posSystemsUAE = [
-  { name: "3sPOS", category: "Live" },
-  { name: "Amepos", category: "Live" },
-  { name: "BIMPOS", category: "Live" },
-  { name: "Cibo", category: "Live" },
-  { name: "Datamate/Hotsoft Purple Key", category: "Live" },
-  { name: "Dgtera", category: "Live" },
-  { name: "Dineplan", category: "Live" },
-  { name: "Foodics", category: "Live" },
-  { name: "ForkPOS", category: "Live" },
-  { name: "Fodista", category: "Live" },
-  { name: "G5POS", category: "Live" },
+  { name: "3sPOS", logo: pos3s },
+  { name: "Amepos", logo: amepos },
+  { name: "BIMPOS", logo: bimpos },
+  { name: "Cibo", logo: cibo },
+  { name: "Datamate/Hotsoft Purple Key", logo: datamate },
+  { name: "Dgtera", logo: dgtera },
+  { name: "Dineplan", logo: dineplan },
+  { name: "Foodics", logo: foodics },
+  { name: "ForkPOS", logo: forkpos },
+  { name: "Fodista", logo: fodista },
+  { name: "G5POS", logo: g5pos },
 ];
 
 export default function POSIntegrations() {
@@ -36,15 +46,17 @@ export default function POSIntegrations() {
           {posSystemsUAE.map((pos, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex items-center gap-3 animate-fade-in"
+              className="bg-card border border-border rounded-lg p-6 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold text-foreground truncate">
-                  {pos.name}
-                </h3>
-              </div>
+              <img 
+                src={pos.logo} 
+                alt={`${pos.name} logo`}
+                className="h-12 w-auto object-contain"
+              />
+              <h3 className="text-xs font-medium text-muted-foreground text-center">
+                {pos.name}
+              </h3>
             </div>
           ))}
         </div>

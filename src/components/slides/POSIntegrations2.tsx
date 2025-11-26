@@ -1,18 +1,28 @@
 import SlideLayout from "./SlideLayout";
-import { CheckCircle2 } from "lucide-react";
+import { Building2 } from "lucide-react";
+import idine from "@/assets/pos-logos/idine.png";
+import microsOracle from "@/assets/pos-logos/micros-oracle.png";
+import ncrBsl from "@/assets/pos-logos/ncr-bsl.webp";
+import nubaSoft from "@/assets/pos-logos/nuba-soft.webp";
+import ocim from "@/assets/pos-logos/ocim.webp";
+import omakPos from "@/assets/pos-logos/omak-pos.png";
+import omegaPos from "@/assets/pos-logos/omega-pos.webp";
+import polaris from "@/assets/pos-logos/polaris.jpg";
+import posbytz from "@/assets/pos-logos/posbytz.png";
+import posify from "@/assets/pos-logos/posify.webp";
 
 const posSystemsUAE = [
-  { name: "I-Dine/Innosolv", category: "Live" },
-  { name: "LS Retail", category: "Live" },
-  { name: "Micros Oracle Symphony Gen 2", category: "Live" },
-  { name: "NCR BSL", category: "Live" },
-  { name: "Nuba Soft", category: "Live" },
-  { name: "Ocim", category: "Upcoming" },
-  { name: "OMAK POS", category: "Live" },
-  { name: "OMEGA POS Technology", category: "Live" },
-  { name: "Polaris Technology", category: "Live" },
-  { name: "PosBytz", category: "Live" },
-  { name: "Posify", category: "Live" },
+  { name: "I-Dine/Innosolv", logo: idine },
+  { name: "LS Retail", logo: null },
+  { name: "Micros Oracle Symphony Gen 2", logo: microsOracle },
+  { name: "NCR BSL", logo: ncrBsl },
+  { name: "Nuba Soft", logo: nubaSoft },
+  { name: "Ocim", logo: ocim },
+  { name: "OMAK POS", logo: omakPos },
+  { name: "OMEGA POS Technology", logo: omegaPos },
+  { name: "Polaris Technology", logo: polaris },
+  { name: "PosBytz", logo: posbytz },
+  { name: "Posify", logo: posify },
 ];
 
 export default function POSIntegrations2() {
@@ -36,15 +46,21 @@ export default function POSIntegrations2() {
           {posSystemsUAE.map((pos, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex items-center gap-3 animate-fade-in"
+              className="bg-card border border-border rounded-lg p-6 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold text-foreground truncate">
-                  {pos.name}
-                </h3>
-              </div>
+              {pos.logo ? (
+                <img 
+                  src={pos.logo} 
+                  alt={`${pos.name} logo`}
+                  className="h-12 w-auto object-contain"
+                />
+              ) : (
+                <Building2 className="h-12 w-12 text-muted-foreground/40" />
+              )}
+              <h3 className="text-xs font-medium text-muted-foreground text-center">
+                {pos.name}
+              </h3>
             </div>
           ))}
         </div>

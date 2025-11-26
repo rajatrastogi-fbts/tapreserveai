@@ -1,5 +1,5 @@
 import SlideLayout from "./SlideLayout";
-import { TrendingDown, DollarSign, Clock, Percent } from "lucide-react";
+import { TrendingDown, DollarSign, Clock } from "lucide-react";
 import problemImage from "@/assets/problem-stressed.jpg";
 
 const problems = [
@@ -18,11 +18,6 @@ const problems = [
     icon: Clock,
     title: "Slow Table Turnover",
     description: "Payment process is the biggest bottleneck",
-  },
-  {
-    icon: Percent,
-    title: "The Aggregator Tax",
-    description: "High commission fees eating into profits",
   },
 ];
 

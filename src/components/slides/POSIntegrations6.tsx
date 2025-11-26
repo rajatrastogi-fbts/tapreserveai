@@ -1,33 +1,33 @@
 import SlideLayout from "./SlideLayout";
-import bravery from "@/assets/pos-logos/bravery.jpg";
-import bridge from "@/assets/pos-logos/bridge.jpg";
-import captainpad from "@/assets/pos-logos/captainpad.jpg";
-import cibo from "@/assets/pos-logos/cibo.webp";
-import ciferon from "@/assets/pos-logos/ciferon.jpg";
-import cwsuite from "@/assets/pos-logos/cwsuite.jpg";
-import cypheron from "@/assets/pos-logos/cypheron.png";
-import datamate from "@/assets/pos-logos/datamate.webp";
-import devourin from "@/assets/pos-logos/devourin.jpg";
-import dgtera from "@/assets/pos-logos/dgtera.png";
-import digitory from "@/assets/pos-logos/digitory.jpg";
-import digirestro from "@/assets/pos-logos/digirestro.png";
+import omakPos from "@/assets/pos-logos/omak-pos.png";
+import omegaPos from "@/assets/pos-logos/omega-pos.webp";
+import parbrink from "@/assets/pos-logos/parbrink.jpg";
+import phenix from "@/assets/pos-logos/phenix.jpg";
+import phylo from "@/assets/pos-logos/phylo.jpg";
+import polaris from "@/assets/pos-logos/polaris.jpg";
+import posbytz from "@/assets/pos-logos/posbytz.png";
+import posify from "@/assets/pos-logos/posify.webp";
+import positeasy from "@/assets/pos-logos/positeasy.jpg";
+import prologic from "@/assets/pos-logos/prologic.webp";
+import qpos from "@/assets/pos-logos/qpos.png";
+import qrkey from "@/assets/pos-logos/qrkey.png";
 
 const posSystemsUAE = [
-  { name: "Bravery Kitchen", logo: bravery },
-  { name: "Bridge/Explorex", logo: bridge },
-  { name: "CaptainPad", logo: captainpad },
-  { name: "Cibo", logo: cibo },
-  { name: "Ciferon", logo: ciferon },
-  { name: "CW Suite", logo: cwsuite },
-  { name: "Cypheron POS", logo: cypheron },
-  { name: "Datamate/Hotsoft Purple Key", logo: datamate },
-  { name: "Devourin", logo: devourin },
-  { name: "Dgtera", logo: dgtera },
-  { name: "Digipos/Digitory", logo: digitory },
-  { name: "Digirestro/Concourse", logo: digirestro },
+  { name: "OMAK POS", logo: omakPos },
+  { name: "OMEGA POS Technology", logo: omegaPos },
+  { name: "PAR Brink", logo: parbrink },
+  { name: "Phenix POS", logo: phenix },
+  { name: "Phylo POS", logo: phylo },
+  { name: "Polaris Technology", logo: polaris },
+  { name: "PosBytz", logo: posbytz },
+  { name: "Posify", logo: posify },
+  { name: "Positeasy", logo: positeasy },
+  { name: "Prologic", logo: prologic },
+  { name: "QPos", logo: qpos },
+  { name: "QRKey Pos", logo: qrkey },
 ];
 
-export default function POSIntegrations2() {
+export default function POSIntegrations6() {
   return (
     <SlideLayout background="subtle">
       <div className="space-y-12">
@@ -36,7 +36,7 @@ export default function POSIntegrations2() {
             Available POS Integrations
           </h2>
           <p className="text-2xl text-muted-foreground">
-            Leading POS Systems - Part 2
+            Leading POS Systems - Part 6
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto pt-2">
             TapReserve.AI integrates with all major POS platforms, 
@@ -66,7 +66,7 @@ export default function POSIntegrations2() {
         <div className="text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
             <span className="text-lg font-semibold text-primary">
-              Page 2 of 7
+              Page 6 of 7
             </span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">

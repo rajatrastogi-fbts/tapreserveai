@@ -1,17 +1,26 @@
 import SlideLayout from "./SlideLayout";
-import { CheckCircle2 } from "lucide-react";
+import prologic from "@/assets/pos-logos/prologic.webp";
+import rancelab from "@/assets/pos-logos/rancelab.webp";
+import revel from "@/assets/pos-logos/revel.webp";
+import sahlhub from "@/assets/pos-logos/sahlhub.webp";
+import sapaad from "@/assets/pos-logos/sapaad.webp";
+import spotlight from "@/assets/pos-logos/spotlight.webp";
+import squirrel from "@/assets/pos-logos/squirrel.webp";
+import syrve from "@/assets/pos-logos/syrve.webp";
+import thinksoftwares from "@/assets/pos-logos/thinksoftwares.webp";
+import tmbill from "@/assets/pos-logos/tmbill.png";
 
 const posSystemsUAE = [
-  { name: "Prologic", category: "Live" },
-  { name: "Rancelab", category: "Live" },
-  { name: "Revel", category: "Live" },
-  { name: "Sahlhub", category: "Live" },
-  { name: "Sapaad", category: "Live" },
-  { name: "Spotlight", category: "Live" },
-  { name: "Squirrel", category: "Live" },
-  { name: "Syrve", category: "Live" },
-  { name: "Thinksoftwares", category: "Live" },
-  { name: "TMBill", category: "Live" },
+  { name: "Prologic", logo: prologic },
+  { name: "Rancelab", logo: rancelab },
+  { name: "Revel", logo: revel },
+  { name: "Sahlhub", logo: sahlhub },
+  { name: "Sapaad", logo: sapaad },
+  { name: "Spotlight", logo: spotlight },
+  { name: "Squirrel", logo: squirrel },
+  { name: "Syrve", logo: syrve },
+  { name: "Thinksoftwares", logo: thinksoftwares },
+  { name: "TMBill", logo: tmbill },
 ];
 
 export default function POSIntegrations3() {
@@ -35,15 +44,17 @@ export default function POSIntegrations3() {
           {posSystemsUAE.map((pos, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex items-center gap-3 animate-fade-in"
+              className="bg-card border border-border rounded-lg p-6 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-              <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-semibold text-foreground truncate">
-                  {pos.name}
-                </h3>
-              </div>
+              <img 
+                src={pos.logo} 
+                alt={`${pos.name} logo`}
+                className="h-12 w-auto object-contain"
+              />
+              <h3 className="text-xs font-medium text-muted-foreground text-center">
+                {pos.name}
+              </h3>
             </div>
           ))}
         </div>

@@ -1,5 +1,5 @@
 import SlideLayout from "./SlideLayout";
-import { QrCode, CreditCard, RefreshCw } from "lucide-react";
+import { QrCode, CreditCard, RefreshCw, TrendingUp } from "lucide-react";
 
 const features = [
   {
@@ -19,6 +19,12 @@ const features = [
     title: "Real Time Menu Updates",
     description: "Restaurants can instantly update their menus with current offerings, ensuring accuracy and freshness.",
     highlight: "Always current",
+  },
+  {
+    icon: TrendingUp,
+    title: "Revenue Growth",
+    description: "Boost sales with intelligent upselling and seamless ordering that encourages higher ticket values.",
+    highlight: "More revenue",
   },
 ];
 

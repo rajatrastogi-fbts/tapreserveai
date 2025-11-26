@@ -42,19 +42,21 @@ export default function POSIntegrations() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto pt-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto pt-4 place-items-center">
           {posSystemsUAE.map((pos, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-4 animate-fade-in w-full max-w-[200px]"
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
-              <img 
-                src={pos.logo} 
-                alt={`${pos.name} logo`}
-                className="h-12 w-auto object-contain"
-              />
-              <h3 className="text-xs font-medium text-muted-foreground text-center">
+              <div className="h-16 flex items-center justify-center">
+                <img 
+                  src={pos.logo} 
+                  alt={`${pos.name} logo`}
+                  className="max-h-14 w-auto object-contain"
+                />
+              </div>
+              <h3 className="text-sm font-medium text-center text-foreground">
                 {pos.name}
               </h3>
             </div>

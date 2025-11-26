@@ -11,9 +11,6 @@ import SolutionIntro from "./slides/SolutionIntro";
 import HowItWorks from "./slides/HowItWorks";
 import KeyFeatures from "./slides/KeyFeatures";
 import Benefits from "./slides/Benefits";
-import DemoSlide from "./slides/DemoSlide";
-import Pricing from "./slides/Pricing";
-import Testimonials from "./slides/Testimonials";
 import CallToAction from "./slides/CallToAction";
 import QASlide from "./slides/QASlide";
 
@@ -25,9 +22,6 @@ const slides = [
   HowItWorks,
   KeyFeatures,
   Benefits,
-  DemoSlide,
-  Pricing,
-  Testimonials,
   CallToAction,
   QASlide,
 ];

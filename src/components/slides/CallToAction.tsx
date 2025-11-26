@@ -40,18 +40,24 @@ export default function CallToAction() {
 
           <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
             <h4 className="text-xl font-bold mb-4">Contact Information</h4>
-            <div className="flex flex-wrap justify-center gap-6 text-white/90">
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5" />
-                <span>tapreserve.ai</span>
+            <div className="flex flex-col gap-4 text-white/90">
+              <div className="flex items-center justify-center gap-2">
+                <Globe className="w-5 h-5 flex-shrink-0" />
+                <a href="https://tapreserve.storecomm.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  https://tapreserve.storecomm.ai
+                </a>
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5" />
-                <span>hello@tapreserve.ai</span>
+              <div className="flex items-center justify-center gap-2">
+                <Mail className="w-5 h-5 flex-shrink-0" />
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <a href="mailto:rajat@fbts.in" className="hover:text-white transition-colors">rajat@fbts.in</a>
+                  <span>||</span>
+                  <a href="mailto:rajat@storecomm.ai" className="hover:text-white transition-colors">rajat@storecomm.ai</a>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5" />
-                <span>+1 (555) 123-4567</span>
+              <div className="flex items-center justify-center gap-2">
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <a href="tel:+971545367475" className="hover:text-white transition-colors">+971 545367475</a>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import SlideLayout from "./SlideLayout";
-import { QrCode, CreditCard, RefreshCw, TrendingUp } from "lucide-react";
+import { QrCode, CreditCard, RefreshCw, TrendingUp, Languages } from "lucide-react";
 
 const features = [
   {
@@ -26,6 +26,12 @@ const features = [
     description: "Boost sales with intelligent upselling and seamless ordering that encourages higher ticket values.",
     highlight: "More revenue",
   },
+  {
+    icon: Languages,
+    title: "Multilingual Support",
+    description: "Full platform support in English and Arabic, ensuring seamless experience for all guests in the UAE region.",
+    highlight: "English & Arabic",
+  },
 ];
 
 export default function KeyFeatures() {
@@ -41,7 +47,7 @@ export default function KeyFeatures() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 pt-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
           {features.map((feature, index) => (
             <div
               key={index}

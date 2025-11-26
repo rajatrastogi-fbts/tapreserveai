@@ -10,11 +10,6 @@ const nextSteps = [
     description: "See TapReserve.AI in action with a personalized walkthrough",
   },
   {
-    icon: Zap,
-    title: "14-Day Free Trial",
-    description: "No credit card required. Start serving smarter today",
-  },
-  {
     icon: DollarSign,
     title: "Custom Quote",
     description: "Get pricing tailored to your restaurant's needs",
@@ -38,7 +33,7 @@ export default function CallToAction() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 pt-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 pt-8 max-w-4xl mx-auto">
           {nextSteps.map((step, index) => (
             <div
               key={index}
@@ -62,14 +57,6 @@ export default function CallToAction() {
             >
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Demo Now
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 shadow-elegant text-lg px-8 py-6 h-auto"
-            >
-              <Zap className="w-5 h-5 mr-2" />
-              Start Free Trial
             </Button>
           </div>
 

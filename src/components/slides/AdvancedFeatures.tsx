@@ -19,7 +19,7 @@ const advancedFeatures = [
   },
   {
     icon: LayoutDashboard,
-    title: "Admin & Management",
+    title: "Table & Menu Management",
     description: "Table management system with digital floor plan showing occupied tables, active orders, and payment status in real-time. Real-time menu updates for items, prices, and out-of-stock toggles. Analytics dashboard tracks sales, table turnover rates, and staff performance metrics.",
   },
 ];

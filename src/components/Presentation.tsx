@@ -19,7 +19,6 @@ import AdvancedFeatures from "./slides/AdvancedFeatures";
 import CustomerLoyalty from "./slides/CustomerLoyalty";
 import Benefits from "./slides/Benefits";
 import CallToAction from "./slides/CallToAction";
-import QASlide from "./slides/QASlide";
 
 const slides = [
   TitleSlide,
@@ -37,7 +36,6 @@ const slides = [
   CustomerLoyalty,
   Benefits,
   CallToAction,
-  QASlide,
 ];
 
 export default function Presentation() {

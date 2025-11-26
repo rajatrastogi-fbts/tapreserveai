@@ -1,7 +1,13 @@
 import SlideLayout from "./SlideLayout";
-import { Clock, Wallet, Sparkles } from "lucide-react";
+import { Clock, Wallet, Sparkles, QrCode } from "lucide-react";
 
 const experiences = [
+  {
+    icon: QrCode,
+    title: "Contactless Convenience",
+    description: "Simply scan the QR code at your table to access the full menu instantly. No app download required.",
+    highlight: "No app needed",
+  },
   {
     icon: Clock,
     title: "Quick Turnaround",
@@ -35,7 +41,7 @@ export default function EnhancedGuestExperience() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 pt-8">
+        <div className="grid md:grid-cols-2 gap-8 pt-8 max-w-5xl mx-auto">
           {experiences.map((experience, index) => (
             <div
               key={index}

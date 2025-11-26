@@ -63,6 +63,15 @@ export default function POSIntegrations2() {
               </h3>
             </div>
           ))}
+          <div
+            className="bg-gradient-subtle border-2 border-primary/30 rounded-lg p-6 shadow-soft flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
+            style={{ animationDelay: `${posSystemsUAE.length * 0.1}s` }}
+          >
+            <span className="text-4xl font-bold text-primary">+</span>
+            <h3 className="text-sm font-semibold text-foreground text-center">
+              & Many More
+            </h3>
+          </div>
         </div>
 
         <div className="text-center pt-8">

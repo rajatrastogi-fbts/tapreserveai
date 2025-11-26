@@ -26,8 +26,8 @@ const steps = [
   {
     number: "04",
     icon: ChefHat,
-    title: "KITCHEN NOTIFIED",
-    description: "Order sent directly to kitchen printer or KDS",
+    title: "POS NOTIFIED",
+    description: "Order sent directly to POS system, kitchen printer or KDS",
     color: "bg-muted text-foreground",
   },
 ];

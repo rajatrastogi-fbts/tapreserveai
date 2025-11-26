@@ -1,30 +1,24 @@
 import SlideLayout from "./SlideLayout";
-import { TrendingUp, Settings, CreditCard, Heart } from "lucide-react";
+import { QrCode, CreditCard, RefreshCw } from "lucide-react";
 
 const features = [
   {
-    icon: TrendingUp,
-    title: "Upsell & Cross-sell",
-    description: '"Would you like fries with that?" Automated, intelligent suggestions increase average order value by 20-30%.',
-    highlight: "20-30% AOV increase",
-  },
-  {
-    icon: Settings,
-    title: "Customization Heaven",
-    description: '"No onions, extra spicy." Customers can modify orders easily, reducing kitchen errors.',
-    highlight: "90% fewer errors",
+    icon: QrCode,
+    title: "Contactless Ordering",
+    description: "Guests can easily scan QR codes to place orders without waiting for staff assistance.",
+    highlight: "No wait time",
   },
   {
     icon: CreditCard,
-    title: "Integrated Payments",
-    description: "Secure, PCI-compliant payment processing with multiple options (Apple Pay, Google Pay, Credit Card).",
-    highlight: "100% secure",
+    title: "Streamlined Payments",
+    description: "Payments are processed quickly and securely, reducing the time spent on transaction handling.",
+    highlight: "Fast & secure",
   },
   {
-    icon: Heart,
-    title: "Smart Loyalty Program",
-    description: "Built-in digital loyalty stamps or points to drive repeat business.",
-    highlight: "Drive retention",
+    icon: RefreshCw,
+    title: "Real Time Menu Updates",
+    description: "Restaurants can instantly update their menus with current offerings, ensuring accuracy and freshness.",
+    highlight: "Always current",
   },
 ];
 

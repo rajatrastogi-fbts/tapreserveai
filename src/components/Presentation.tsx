@@ -13,6 +13,10 @@ import POSIntegrations from "./slides/POSIntegrations";
 import POSIntegrations2 from "./slides/POSIntegrations2";
 import POSIntegrations3 from "./slides/POSIntegrations3";
 import KeyFeatures from "./slides/KeyFeatures";
+import EnhancedGuestExperience from "./slides/EnhancedGuestExperience";
+import ValueForRestaurants from "./slides/ValueForRestaurants";
+import AdvancedFeatures from "./slides/AdvancedFeatures";
+import CustomerLoyalty from "./slides/CustomerLoyalty";
 import Benefits from "./slides/Benefits";
 import CallToAction from "./slides/CallToAction";
 import QASlide from "./slides/QASlide";
@@ -27,6 +31,10 @@ const slides = [
   POSIntegrations2,
   POSIntegrations3,
   KeyFeatures,
+  EnhancedGuestExperience,
+  ValueForRestaurants,
+  AdvancedFeatures,
+  CustomerLoyalty,
   Benefits,
   CallToAction,
   QASlide,

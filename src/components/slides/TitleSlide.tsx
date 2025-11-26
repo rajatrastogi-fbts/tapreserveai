@@ -14,6 +14,11 @@ export default function TitleSlide() {
         <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto pt-4">
           Revolutionizing Restaurant Operations with Seamless Self-Ordering
         </p>
+        <div className="pt-8">
+          <p className="text-lg md:text-xl text-white/95 font-medium bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-8 py-3 inline-block">
+            Now exclusively with Network International LLC in UAE
+          </p>
+        </div>
       </div>
     </SlideLayout>
   );

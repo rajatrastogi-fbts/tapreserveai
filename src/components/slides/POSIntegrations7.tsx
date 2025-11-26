@@ -1,33 +1,33 @@
 import SlideLayout from "./SlideLayout";
-import bravery from "@/assets/pos-logos/bravery.jpg";
-import bridge from "@/assets/pos-logos/bridge.jpg";
-import captainpad from "@/assets/pos-logos/captainpad.jpg";
-import cibo from "@/assets/pos-logos/cibo.webp";
-import ciferon from "@/assets/pos-logos/ciferon.jpg";
-import cwsuite from "@/assets/pos-logos/cwsuite.jpg";
-import cypheron from "@/assets/pos-logos/cypheron.png";
-import datamate from "@/assets/pos-logos/datamate.webp";
-import devourin from "@/assets/pos-logos/devourin.jpg";
-import dgtera from "@/assets/pos-logos/dgtera.png";
-import digitory from "@/assets/pos-logos/digitory.jpg";
-import digirestro from "@/assets/pos-logos/digirestro.png";
+import qo from "@/assets/pos-logos/qo.png";
+import queuebuster from "@/assets/pos-logos/queuebuster.png";
+import radyes from "@/assets/pos-logos/radyes.jpg";
+import rancelab from "@/assets/pos-logos/rancelab.webp";
+import rawnest from "@/assets/pos-logos/rawnest.jpg";
+import restosuite from "@/assets/pos-logos/restosuite.jpg";
+import revel from "@/assets/pos-logos/revel.webp";
+import romio from "@/assets/pos-logos/romio.jpg";
+import royalpos from "@/assets/pos-logos/royalpos.png";
+import saag from "@/assets/pos-logos/saag.png";
+import sahlhub from "@/assets/pos-logos/sahlhub.webp";
+import sapaad from "@/assets/pos-logos/sapaad.webp";
 
 const posSystemsUAE = [
-  { name: "Bravery Kitchen", logo: bravery },
-  { name: "Bridge/Explorex", logo: bridge },
-  { name: "CaptainPad", logo: captainpad },
-  { name: "Cibo", logo: cibo },
-  { name: "Ciferon", logo: ciferon },
-  { name: "CW Suite", logo: cwsuite },
-  { name: "Cypheron POS", logo: cypheron },
-  { name: "Datamate/Hotsoft Purple Key", logo: datamate },
-  { name: "Devourin", logo: devourin },
-  { name: "Dgtera", logo: dgtera },
-  { name: "Digipos/Digitory", logo: digitory },
-  { name: "Digirestro/Concourse", logo: digirestro },
+  { name: "QO", logo: qo },
+  { name: "QueueBuster", logo: queuebuster },
+  { name: "Radyes", logo: radyes },
+  { name: "RanceLab", logo: rancelab },
+  { name: "RAWNEST", logo: rawnest },
+  { name: "RestoSuite", logo: restosuite },
+  { name: "Revel", logo: revel },
+  { name: "Romio Technologies", logo: romio },
+  { name: "Royal POS", logo: royalpos },
+  { name: "SAAG Systems", logo: saag },
+  { name: "Sahlhub", logo: sahlhub },
+  { name: "Sapaad", logo: sapaad },
 ];
 
-export default function POSIntegrations2() {
+export default function POSIntegrations7() {
   return (
     <SlideLayout background="subtle">
       <div className="space-y-12">
@@ -36,7 +36,7 @@ export default function POSIntegrations2() {
             Available POS Integrations
           </h2>
           <p className="text-2xl text-muted-foreground">
-            Leading POS Systems - Part 2
+            Leading POS Systems - Part 7
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto pt-2">
             TapReserve.AI integrates with all major POS platforms, 
@@ -61,18 +61,30 @@ export default function POSIntegrations2() {
               </h3>
             </div>
           ))}
+          <div
+            className="bg-gradient-subtle border-2 border-primary/30 rounded-lg p-6 shadow-soft flex flex-col items-center justify-center gap-3 animate-fade-in min-h-[120px]"
+            style={{ animationDelay: `${posSystemsUAE.length * 0.1}s` }}
+          >
+            <span className="text-4xl font-bold text-primary">+48</span>
+            <h3 className="text-sm font-semibold text-foreground text-center">
+              More Systems
+            </h3>
+          </div>
         </div>
 
         <div className="text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
             <span className="text-lg font-semibold text-primary">
-              Page 2 of 7
+              Page 7 of 7
             </span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">
               12 POS Systems
             </span>
           </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            <strong className="text-foreground">Total: 132+ POS Integrations</strong> Available Worldwide
+          </p>
         </div>
       </div>
     </SlideLayout>

@@ -1,28 +1,30 @@
 import SlideLayout from "./SlideLayout";
-import pos3s from "@/assets/pos-logos/3spos.webp";
+import accessPos from "@/assets/pos-logos/access-pos.jpg";
+import adloggs from "@/assets/pos-logos/adloggs.jpg";
+import agilysys from "@/assets/pos-logos/agilysys.jpg";
+import allpos from "@/assets/pos-logos/allpos.jpg";
 import amepos from "@/assets/pos-logos/amepos.png";
+import app4 from "@/assets/pos-logos/app4.jpg";
+import bestpos from "@/assets/pos-logos/bestpos.png";
+import billberry from "@/assets/pos-logos/billberry.jpg";
 import bimpos from "@/assets/pos-logos/bimpos.png";
-import cibo from "@/assets/pos-logos/cibo.webp";
-import datamate from "@/assets/pos-logos/datamate.webp";
-import dgtera from "@/assets/pos-logos/dgtera.png";
-import dineplan from "@/assets/pos-logos/dineplan.webp";
-import foodics from "@/assets/pos-logos/foodics.png";
-import forkpos from "@/assets/pos-logos/forkpos.png";
-import fodista from "@/assets/pos-logos/fodista.png";
-import g5pos from "@/assets/pos-logos/g5pos.webp";
+import bitsila from "@/assets/pos-logos/bitsila.jpg";
+import biz1book from "@/assets/pos-logos/biz1book.jpg";
+import bluelotus from "@/assets/pos-logos/bluelotus.png";
 
 const posSystemsUAE = [
-  { name: "3sPOS", logo: pos3s },
+  { name: "Access POS", logo: accessPos },
+  { name: "Adloggs", logo: adloggs },
+  { name: "Agilysys", logo: agilysys },
+  { name: "All POS", logo: allpos },
   { name: "Amepos", logo: amepos },
+  { name: "App4", logo: app4 },
+  { name: "BestPOS/FnB 360", logo: bestpos },
+  { name: "Billberry", logo: billberry },
   { name: "BIMPOS", logo: bimpos },
-  { name: "Cibo", logo: cibo },
-  { name: "Datamate/Hotsoft Purple Key", logo: datamate },
-  { name: "Dgtera", logo: dgtera },
-  { name: "Dineplan", logo: dineplan },
-  { name: "Foodics", logo: foodics },
-  { name: "ForkPOS", logo: forkpos },
-  { name: "Fodista", logo: fodista },
-  { name: "G5POS", logo: g5pos },
+  { name: "Bitsila", logo: bitsila },
+  { name: "Biz1Book", logo: biz1book },
+  { name: "Blue Lotus 360", logo: bluelotus },
 ];
 
 export default function POSIntegrations() {
@@ -34,10 +36,10 @@ export default function POSIntegrations() {
             Available POS Integrations
           </h2>
           <p className="text-2xl text-muted-foreground">
-            Leading POS Systems in UAE - Part 1
+            Leading POS Systems - Part 1
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto pt-2">
-            TapReserve.AI integrates with all major POS platforms in the UAE, 
+            TapReserve.AI integrates with all major POS platforms, 
             ensuring smooth operations regardless of your current system.
           </p>
         </div>
@@ -64,11 +66,11 @@ export default function POSIntegrations() {
         <div className="text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
             <span className="text-lg font-semibold text-primary">
-              Page 1 of 3
+              Page 1 of 7
             </span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">
-              11 POS Systems
+              12 POS Systems
             </span>
           </div>
         </div>

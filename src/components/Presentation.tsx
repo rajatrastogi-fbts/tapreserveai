@@ -10,6 +10,8 @@ import ProblemDiners from "./slides/ProblemDiners";
 import SolutionIntro from "./slides/SolutionIntro";
 import HowItWorks from "./slides/HowItWorks";
 import POSIntegrations from "./slides/POSIntegrations";
+import POSIntegrations2 from "./slides/POSIntegrations2";
+import POSIntegrations3 from "./slides/POSIntegrations3";
 import KeyFeatures from "./slides/KeyFeatures";
 import Benefits from "./slides/Benefits";
 import CallToAction from "./slides/CallToAction";
@@ -22,6 +24,8 @@ const slides = [
   SolutionIntro,
   HowItWorks,
   POSIntegrations,
+  POSIntegrations2,
+  POSIntegrations3,
   KeyFeatures,
   Benefits,
   CallToAction,

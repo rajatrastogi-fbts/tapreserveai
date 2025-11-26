@@ -2,20 +2,19 @@ import SlideLayout from "./SlideLayout";
 import { CheckCircle2 } from "lucide-react";
 
 const posSystemsUAE = [
-  { name: "3sPOS", category: "Live" },
-  { name: "Amepos", category: "Live" },
-  { name: "BIMPOS", category: "Live" },
-  { name: "Cibo", category: "Live" },
-  { name: "Datamate/Hotsoft Purple Key", category: "Live" },
-  { name: "Dgtera", category: "Live" },
-  { name: "Dineplan", category: "Live" },
-  { name: "Foodics", category: "Live" },
-  { name: "ForkPOS", category: "Live" },
-  { name: "Fodista", category: "Live" },
-  { name: "G5POS", category: "Live" },
+  { name: "Prologic", category: "Live" },
+  { name: "Rancelab", category: "Live" },
+  { name: "Revel", category: "Live" },
+  { name: "Sahlhub", category: "Live" },
+  { name: "Sapaad", category: "Live" },
+  { name: "Spotlight", category: "Live" },
+  { name: "Squirrel", category: "Live" },
+  { name: "Syrve", category: "Live" },
+  { name: "Thinksoftwares", category: "Live" },
+  { name: "TMBill", category: "Live" },
 ];
 
-export default function POSIntegrations() {
+export default function POSIntegrations3() {
   return (
     <SlideLayout background="subtle">
       <div className="space-y-12">
@@ -24,7 +23,7 @@ export default function POSIntegrations() {
             Available POS Integrations
           </h2>
           <p className="text-2xl text-muted-foreground">
-            Leading POS Systems in UAE - Part 1
+            Leading POS Systems in UAE - Part 3
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto pt-2">
             TapReserve.AI integrates with all major POS platforms in the UAE, 
@@ -52,13 +51,16 @@ export default function POSIntegrations() {
         <div className="text-center pt-8">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary/10 border border-primary/20">
             <span className="text-lg font-semibold text-primary">
-              Page 1 of 3
+              Page 3 of 3
             </span>
             <span className="text-muted-foreground">|</span>
             <span className="text-sm text-muted-foreground">
-              11 POS Systems
+              10 POS Systems
             </span>
           </div>
+          <p className="text-sm text-muted-foreground mt-4">
+            <strong className="text-foreground">Total: 32 POS Integrations</strong> (31 Live + 1 Upcoming)
+          </p>
         </div>
       </div>
     </SlideLayout>

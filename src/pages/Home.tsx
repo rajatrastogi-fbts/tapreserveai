@@ -9,7 +9,7 @@ import {
   Clock, Users, TrendingUp, Zap, Shield, CheckCircle2,
   Smartphone, QrCode, Utensils, CreditCard, Star, BarChart,
   LayoutGrid, FileText, Wifi, TrendingDown, AlertCircle,
-  Timer, DollarSign, ThumbsUp
+  Timer, DollarSign, ThumbsUp, Sparkles
 } from "lucide-react";
 // POS Logos
 import accessPos from "@/assets/pos-logos/access-pos.jpg";
@@ -356,53 +356,61 @@ export default function Home() {
       </section>
 
       {/* Solution Section */}
-      <section id="solution" className="py-20">
+      <section id="solution" className="py-20 bg-gradient-hero">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Introducing TapReserve.AI</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The intelligent self-ordering platform that transforms restaurant operations while delighting guests
-            </p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center text-white">
+            <div className="space-y-8 animate-fade-in">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm">
+                <Sparkles className="w-5 h-5" />
+                <span className="text-sm font-medium">Our Solution</span>
+              </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <img src={qrImage} alt="QR code scanning" className="rounded-2xl shadow-elegant w-full" />
+              <div className="space-y-6">
+                <h2 className="text-5xl md:text-6xl font-bold leading-tight">
+                  One Simple QR Code.
+                  <br />A World of Possibilities.
+                </h2>
+                
+                <div className="space-y-4 text-xl text-white/90">
+                  <p>
+                    <strong>TapReserve.AI</strong> is an end-to-end self-ordering and payment
+                    platform accessible via any smartphone.
+                  </p>
+                  <p className="text-2xl font-semibold">
+                    Scan. Order. Pay. Enjoy. It's that simple.
+                  </p>
+                  <p>No app download required. It works directly in the web browser.</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-8 pt-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <QrCode className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/70">Scan</div>
+                    <div className="text-lg font-semibold">QR Code</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                    <Smartphone className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-white/70">Any</div>
+                    <div className="text-lg font-semibold">Device</div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="space-y-6 animate-fade-in">
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-soft">
-                <h3 className="text-2xl font-bold mb-4">For Restaurants</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Reduce labor costs by 30%",
-                    "Increase table turnover by 25%",
-                    "Eliminate order errors",
-                    "Boost average order value by 20%",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
-              <div className="bg-card border border-border rounded-2xl p-8 shadow-soft">
-                <h3 className="text-2xl font-bold mb-4">For Diners</h3>
-                <ul className="space-y-3">
-                  {[
-                    "Order instantly at your table",
-                    "No waiting for service",
-                    "Complete control over your experience",
-                    "Pay when you're ready to leave",
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-elegant animate-fade-in">
+              <img
+                src={qrImage}
+                alt="Scanning QR code with phone to view menu"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>

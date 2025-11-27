@@ -1,5 +1,5 @@
-import Presentation from "@/components/Presentation";
+import Home from "./Home";
 
 export default function Index() {
-  return <Presentation />;
+  return <Home />;
 }

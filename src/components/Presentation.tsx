@@ -17,6 +17,7 @@ import POSIntegrations5 from "./slides/POSIntegrations5";
 import POSIntegrations6 from "./slides/POSIntegrations6";
 import POSIntegrations7 from "./slides/POSIntegrations7";
 import KeyFeatures from "./slides/KeyFeatures";
+import MobilePOS from "./slides/MobilePOS";
 import EnhancedGuestExperience from "./slides/EnhancedGuestExperience";
 import ValueForRestaurants from "./slides/ValueForRestaurants";
 import AdvancedFeatures from "./slides/AdvancedFeatures";
@@ -38,6 +39,7 @@ const slides = [
   POSIntegrations6,
   POSIntegrations7,
   KeyFeatures,
+  MobilePOS,
   EnhancedGuestExperience,
   ValueForRestaurants,
   AdvancedFeatures,

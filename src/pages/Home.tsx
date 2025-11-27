@@ -11,14 +11,246 @@ import {
   LayoutGrid, FileText, Wifi, TrendingDown, AlertCircle,
   Timer, DollarSign, ThumbsUp
 } from "lucide-react";
-import POSIntegrations from "@/components/slides/POSIntegrations";
-import POSIntegrations2 from "@/components/slides/POSIntegrations2";
-import POSIntegrations3 from "@/components/slides/POSIntegrations3";
-import POSIntegrations4 from "@/components/slides/POSIntegrations4";
-import POSIntegrations5 from "@/components/slides/POSIntegrations5";
-import POSIntegrations6 from "@/components/slides/POSIntegrations6";
-import POSIntegrations7 from "@/components/slides/POSIntegrations7";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// POS Logos
+import accessPos from "@/assets/pos-logos/access-pos.jpg";
+import adloggs from "@/assets/pos-logos/adloggs.jpg";
+import agilysys from "@/assets/pos-logos/agilysys.jpg";
+import allpos from "@/assets/pos-logos/allpos.jpg";
+import amepos from "@/assets/pos-logos/amepos.png";
+import app4 from "@/assets/pos-logos/app4.jpg";
+import bestpos from "@/assets/pos-logos/bestpos.png";
+import billberry from "@/assets/pos-logos/billberry.jpg";
+import bimpos from "@/assets/pos-logos/bimpos.png";
+import bitsila from "@/assets/pos-logos/bitsila.jpg";
+import biz1book from "@/assets/pos-logos/biz1book.jpg";
+import bluelotus from "@/assets/pos-logos/bluelotus.png";
+import bravery from "@/assets/pos-logos/bravery.jpg";
+import bridge from "@/assets/pos-logos/bridge.jpg";
+import captainpad from "@/assets/pos-logos/captainpad.jpg";
+import cibo from "@/assets/pos-logos/cibo.webp";
+import ciferon from "@/assets/pos-logos/ciferon.jpg";
+import cwsuite from "@/assets/pos-logos/cwsuite.jpg";
+import cypheron from "@/assets/pos-logos/cypheron.png";
+import datamate from "@/assets/pos-logos/datamate.webp";
+import devourin from "@/assets/pos-logos/devourin.jpg";
+import dgtera from "@/assets/pos-logos/dgtera.png";
+import digirestro from "@/assets/pos-logos/digirestro.png";
+import digitory from "@/assets/pos-logos/digitory.jpg";
+import dineorder from "@/assets/pos-logos/dineorder.jpg";
+import dineplan from "@/assets/pos-logos/dineplan.webp";
+import dinnerdaddy from "@/assets/pos-logos/dinnerdaddy.jpg";
+import dinopos from "@/assets/pos-logos/dinopos.png";
+import eretail from "@/assets/pos-logos/eretail.png";
+import ezee from "@/assets/pos-logos/ezee.jpg";
+import flipdish from "@/assets/pos-logos/flipdish.jpg";
+import flipoffice from "@/assets/pos-logos/flipoffice.jpg";
+import foaps from "@/assets/pos-logos/foaps.png";
+import fodista from "@/assets/pos-logos/fodista.png";
+import foodics from "@/assets/pos-logos/foodics.png";
+import forkpos from "@/assets/pos-logos/forkpos.png";
+import fusion from "@/assets/pos-logos/fusion.jpg";
+import g5pos from "@/assets/pos-logos/g5pos.webp";
+import geidea from "@/assets/pos-logos/geidea.jpg";
+import gofrugal from "@/assets/pos-logos/gofrugal.png";
+import grafterr from "@/assets/pos-logos/grafterr.jpg";
+import hungerbox from "@/assets/pos-logos/hungerbox.png";
+import idine from "@/assets/pos-logos/idine.png";
+import jpos from "@/assets/pos-logos/jpos.jpg";
+import kayana from "@/assets/pos-logos/kayana.jpg";
+import kuber from "@/assets/pos-logos/kuber.jpg";
+import kurve from "@/assets/pos-logos/kurve.jpg";
+import lightspeed from "@/assets/pos-logos/lightspeed.png";
+import lsretail from "@/assets/pos-logos/lsretail.jpg";
+import lucid from "@/assets/pos-logos/lucid.png";
+import menew from "@/assets/pos-logos/menew.png";
+import microsOracle from "@/assets/pos-logos/micros-oracle.png";
+import microsRes3700 from "@/assets/pos-logos/micros-res3700.jpg";
+import mygenie from "@/assets/pos-logos/mygenie.jpg";
+import mymenu from "@/assets/pos-logos/mymenu.jpg";
+import myorderbox from "@/assets/pos-logos/myorderbox.jpg";
+import ncrBsl from "@/assets/pos-logos/ncr-bsl.webp";
+import nubaSoft from "@/assets/pos-logos/nuba-soft.webp";
+import ocim from "@/assets/pos-logos/ocim.webp";
+import odoo from "@/assets/pos-logos/odoo.png";
+import omakPos from "@/assets/pos-logos/omak-pos.png";
+import omegaPos from "@/assets/pos-logos/omega-pos.webp";
+import parbrink from "@/assets/pos-logos/parbrink.jpg";
+import phenix from "@/assets/pos-logos/phenix.jpg";
+import phylo from "@/assets/pos-logos/phylo.jpg";
+import polaris from "@/assets/pos-logos/polaris.jpg";
+import posbytz from "@/assets/pos-logos/posbytz.png";
+import posify from "@/assets/pos-logos/posify.webp";
+import positeasy from "@/assets/pos-logos/positeasy.jpg";
+import prologic from "@/assets/pos-logos/prologic.webp";
+import qo from "@/assets/pos-logos/qo.png";
+import qpos from "@/assets/pos-logos/qpos.png";
+import qrkey from "@/assets/pos-logos/qrkey.png";
+import queuebuster from "@/assets/pos-logos/queuebuster.png";
+import radyes from "@/assets/pos-logos/radyes.jpg";
+import rancelab from "@/assets/pos-logos/rancelab.webp";
+import rawnest from "@/assets/pos-logos/rawnest.jpg";
+import restosuite from "@/assets/pos-logos/restosuite.jpg";
+import revel from "@/assets/pos-logos/revel.webp";
+import romio from "@/assets/pos-logos/romio.jpg";
+import royalpos from "@/assets/pos-logos/royalpos.png";
+import saag from "@/assets/pos-logos/saag.png";
+import sahlhub from "@/assets/pos-logos/sahlhub.webp";
+import sapaad from "@/assets/pos-logos/sapaad.webp";
+import semnox from "@/assets/pos-logos/semnox.jpg";
+import sequential from "@/assets/pos-logos/sequential.jpg";
+import sero from "@/assets/pos-logos/sero.jpg";
+import sigmoss from "@/assets/pos-logos/sigmoss.png";
+import simpletouch from "@/assets/pos-logos/simpletouch.jpg";
+import smartpos from "@/assets/pos-logos/smartpos.jpg";
+import smartq from "@/assets/pos-logos/smartq.jpg";
+import sparktech from "@/assets/pos-logos/sparktech.jpg";
+import speque from "@/assets/pos-logos/speque.jpg";
+import spotlight from "@/assets/pos-logos/spotlight.webp";
+import square from "@/assets/pos-logos/square.jpg";
+import squirrel from "@/assets/pos-logos/squirrel.webp";
+import stackedin from "@/assets/pos-logos/stackedin.jpg";
+import summerpos from "@/assets/pos-logos/summerpos.png";
+import sumup from "@/assets/pos-logos/sumup.jpg";
+import supy from "@/assets/pos-logos/supy.jpg";
+import svika from "@/assets/pos-logos/svika.jpg";
+import swiggy from "@/assets/pos-logos/swiggy.jpg";
+import synques from "@/assets/pos-logos/synques.jpg";
+import syrve from "@/assets/pos-logos/syrve.webp";
+import tevalis from "@/assets/pos-logos/tevalis.jpg";
+import theondemand from "@/assets/pos-logos/theondemand.jpg";
+import thinksoftwares from "@/assets/pos-logos/thinksoftwares.webp";
+import tmbill from "@/assets/pos-logos/tmbill.png";
+import toast from "@/assets/pos-logos/toast.png";
+import touchbistro from "@/assets/pos-logos/touchbistro.png";
+import tray from "@/assets/pos-logos/tray.jpg";
+import urbandart from "@/assets/pos-logos/urbandart.jpg";
+import vada from "@/assets/pos-logos/vada.png";
+import vertex from "@/assets/pos-logos/vertex.jpg";
+import yotto from "@/assets/pos-logos/yotto.png";
+import yourbuddy from "@/assets/pos-logos/yourbuddy.jpg";
+import zentrades from "@/assets/pos-logos/zentrades.png";
+import threePos from "@/assets/pos-logos/3spos.webp";
+
+const allPOSSystems = [
+  { name: "Access POS", logo: accessPos },
+  { name: "Adloggs", logo: adloggs },
+  { name: "Agilysys", logo: agilysys },
+  { name: "All POS", logo: allpos },
+  { name: "Amepos", logo: amepos },
+  { name: "App4", logo: app4 },
+  { name: "BestPOS/FnB 360", logo: bestpos },
+  { name: "Billberry", logo: billberry },
+  { name: "BIMPOS", logo: bimpos },
+  { name: "Bitsila", logo: bitsila },
+  { name: "Biz1Book", logo: biz1book },
+  { name: "Blue Lotus 360", logo: bluelotus },
+  { name: "Bravery", logo: bravery },
+  { name: "Bridge POS", logo: bridge },
+  { name: "Captain Pad", logo: captainpad },
+  { name: "Cibo POS", logo: cibo },
+  { name: "Ciferon", logo: ciferon },
+  { name: "CW Suite", logo: cwsuite },
+  { name: "Cypheron", logo: cypheron },
+  { name: "DataMate", logo: datamate },
+  { name: "Devourin", logo: devourin },
+  { name: "DGtera", logo: dgtera },
+  { name: "DigiRestro", logo: digirestro },
+  { name: "Digitory", logo: digitory },
+  { name: "DineOrder", logo: dineorder },
+  { name: "DinePlan", logo: dineplan },
+  { name: "Dinner Daddy", logo: dinnerdaddy },
+  { name: "Dino POS", logo: dinopos },
+  { name: "E-Retail", logo: eretail },
+  { name: "Ezee", logo: ezee },
+  { name: "Flipdish", logo: flipdish },
+  { name: "Flip Office", logo: flipoffice },
+  { name: "FOAPS", logo: foaps },
+  { name: "Fodista", logo: fodista },
+  { name: "Foodics", logo: foodics },
+  { name: "Fork POS", logo: forkpos },
+  { name: "Fusion", logo: fusion },
+  { name: "G5 POS", logo: g5pos },
+  { name: "Geidea", logo: geidea },
+  { name: "GoFrugal", logo: gofrugal },
+  { name: "Grafterr", logo: grafterr },
+  { name: "Hungerbox", logo: hungerbox },
+  { name: "iDine", logo: idine },
+  { name: "JPOS", logo: jpos },
+  { name: "Kayana", logo: kayana },
+  { name: "Kuber", logo: kuber },
+  { name: "Kurve", logo: kurve },
+  { name: "Lightspeed", logo: lightspeed },
+  { name: "LS Retail", logo: lsretail },
+  { name: "Lucid", logo: lucid },
+  { name: "Menew", logo: menew },
+  { name: "Micros Oracle", logo: microsOracle },
+  { name: "Micros RES 3700", logo: microsRes3700 },
+  { name: "My Genie", logo: mygenie },
+  { name: "MyMenu", logo: mymenu },
+  { name: "My Order Box", logo: myorderbox },
+  { name: "NCR BSL", logo: ncrBsl },
+  { name: "Nuba Soft", logo: nubaSoft },
+  { name: "OCIM", logo: ocim },
+  { name: "Odoo", logo: odoo },
+  { name: "Omak POS", logo: omakPos },
+  { name: "Omega POS", logo: omegaPos },
+  { name: "Parbrink", logo: parbrink },
+  { name: "Phenix", logo: phenix },
+  { name: "Phylo", logo: phylo },
+  { name: "Polaris", logo: polaris },
+  { name: "Posbytz", logo: posbytz },
+  { name: "Posify", logo: posify },
+  { name: "Posit Easy", logo: positeasy },
+  { name: "Prologic", logo: prologic },
+  { name: "QO", logo: qo },
+  { name: "QPOS", logo: qpos },
+  { name: "QR Key", logo: qrkey },
+  { name: "Queue Buster", logo: queuebuster },
+  { name: "Radyes", logo: radyes },
+  { name: "Rancelab", logo: rancelab },
+  { name: "Raw Nest", logo: rawnest },
+  { name: "Resto Suite", logo: restosuite },
+  { name: "Revel", logo: revel },
+  { name: "Romio", logo: romio },
+  { name: "Royal POS", logo: royalpos },
+  { name: "Saag", logo: saag },
+  { name: "Sahl Hub", logo: sahlhub },
+  { name: "Sapaad", logo: sapaad },
+  { name: "Semnox", logo: semnox },
+  { name: "Sequential", logo: sequential },
+  { name: "Sero", logo: sero },
+  { name: "Sigmoss", logo: sigmoss },
+  { name: "Simple Touch", logo: simpletouch },
+  { name: "Smart POS", logo: smartpos },
+  { name: "SmartQ", logo: smartq },
+  { name: "Sparktech", logo: sparktech },
+  { name: "Speque", logo: speque },
+  { name: "Spotlight", logo: spotlight },
+  { name: "Square", logo: square },
+  { name: "Squirrel", logo: squirrel },
+  { name: "Stacked In", logo: stackedin },
+  { name: "Summer POS", logo: summerpos },
+  { name: "SumUp", logo: sumup },
+  { name: "Supy", logo: supy },
+  { name: "Svika", logo: svika },
+  { name: "Swiggy", logo: swiggy },
+  { name: "Synques", logo: synques },
+  { name: "Syrve", logo: syrve },
+  { name: "Tevalis", logo: tevalis },
+  { name: "The On Demand", logo: theondemand },
+  { name: "Think Softwares", logo: thinksoftwares },
+  { name: "TM Bill", logo: tmbill },
+  { name: "Toast", logo: toast },
+  { name: "TouchBistro", logo: touchbistro },
+  { name: "Tray", logo: tray },
+  { name: "Urbandart", logo: urbandart },
+  { name: "Vada", logo: vada },
+  { name: "Vertex", logo: vertex },
+  { name: "Yotto", logo: yotto },
+  { name: "Your Buddy", logo: yourbuddy },
+  { name: "Zentrades", logo: zentrades },
+  { name: "3S POS", logo: threePos },
+];
 
 export default function Home() {
   return (
@@ -310,44 +542,44 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">POS System Integrations</h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-4">
               Seamlessly integrate with 180+ leading POS systems in the UAE and beyond
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Scroll to explore all integrations
             </p>
           </div>
 
-          <Tabs defaultValue="page1" className="w-full">
-            <TabsList className="grid w-full grid-cols-7 mb-8">
-              <TabsTrigger value="page1">Page 1</TabsTrigger>
-              <TabsTrigger value="page2">Page 2</TabsTrigger>
-              <TabsTrigger value="page3">Page 3</TabsTrigger>
-              <TabsTrigger value="page4">Page 4</TabsTrigger>
-              <TabsTrigger value="page5">Page 5</TabsTrigger>
-              <TabsTrigger value="page6">Page 6</TabsTrigger>
-              <TabsTrigger value="page7">Page 7</TabsTrigger>
-            </TabsList>
-            
-            <TabsContent value="page1" className="space-y-8">
-              <POSIntegrations />
-            </TabsContent>
-            <TabsContent value="page2">
-              <POSIntegrations2 />
-            </TabsContent>
-            <TabsContent value="page3">
-              <POSIntegrations3 />
-            </TabsContent>
-            <TabsContent value="page4">
-              <POSIntegrations4 />
-            </TabsContent>
-            <TabsContent value="page5">
-              <POSIntegrations5 />
-            </TabsContent>
-            <TabsContent value="page6">
-              <POSIntegrations6 />
-            </TabsContent>
-            <TabsContent value="page7">
-              <POSIntegrations7 />
-            </TabsContent>
-          </Tabs>
+          <div className="bg-card border border-border rounded-3xl p-8 shadow-elegant">
+            <div className="h-[600px] overflow-y-auto pr-4 custom-scrollbar">
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                {allPOSSystems.map((pos, index) => (
+                  <div
+                    key={index}
+                    className="bg-background border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 min-h-[120px] hover:scale-105"
+                  >
+                    <img 
+                      src={pos.logo} 
+                      alt={`${pos.name} logo`}
+                      className="h-12 w-auto object-contain"
+                    />
+                    <h3 className="text-xs font-medium text-muted-foreground text-center">
+                      {pos.name}
+                    </h3>
+                  </div>
+                ))}
+                <div className="bg-gradient-hero text-white rounded-lg p-4 shadow-soft flex flex-col items-center justify-center gap-3 min-h-[120px]">
+                  <div className="text-3xl font-bold">+48</div>
+                  <p className="text-xs text-center opacity-90">More Systems</p>
+                </div>
+              </div>
+            </div>
+            <div className="text-center pt-6 border-t border-border mt-6">
+              <span className="text-lg font-semibold text-primary">
+                180+ POS Systems Supported
+              </span>
+            </div>
+          </div>
         </div>
       </section>
 

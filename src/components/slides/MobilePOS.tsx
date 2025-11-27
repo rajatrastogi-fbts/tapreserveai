@@ -1,36 +1,46 @@
 import SlideLayout from "./SlideLayout";
-import { Smartphone, CreditCard, Wifi, Zap, ShieldCheck, TrendingUp } from "lucide-react";
+import { LayoutGrid, Users, FileText, TrendingUp } from "lucide-react";
 
 const features = [
   {
-    icon: Smartphone,
-    title: "Mobile POS Solution",
-    description: "Transform any smartphone or tablet into a powerful point of sale system for on-the-go transactions.",
+    icon: LayoutGrid,
+    title: "Table Management System",
+    items: [
+      "Digital floor plan with drag-and-drop",
+      "Real-time table status & occupancy",
+      "Online reservations & waitlist",
+      "Customer preferences & special occasions"
+    ]
   },
   {
-    icon: CreditCard,
-    title: "EDC Machine Integration",
-    description: "Seamlessly integrate with EDC (Electronic Data Capture) machines for secure card payments.",
+    icon: Users,
+    title: "Waiter Management",
+    items: [
+      "Automatic section-wise table assignment",
+      "Workload balancing & performance tracking",
+      "Commission tracking for upselling",
+      "Waiter KPIs & customer feedback scores"
+    ]
   },
   {
-    icon: Wifi,
-    title: "Offline Capability",
-    description: "Continue operations even without internet connectivity, syncing data when back online.",
-  },
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Process orders and payments in seconds with optimized mobile performance.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Secure & Compliant",
-    description: "Bank-grade encryption and PCI-DSS compliance for all transactions.",
+    icon: FileText,
+    title: "KOT/BOT Management",
+    items: [
+      "Instant printing to kitchen & bar",
+      "Course-wise order timing control",
+      "Real-time order status tracking",
+      "Automatic alerts for delayed orders"
+    ]
   },
   {
     icon: TrendingUp,
-    title: "Real-Time Analytics",
-    description: "Track sales, inventory, and performance metrics instantly on any device.",
+    title: "Advanced Features",
+    items: [
+      "Menu engineering & profitability analysis",
+      "Cooking preferences & allergy alerts",
+      "Smart upselling & combo suggestions",
+      "Real-time menu updates & pricing"
+    ]
   },
 ];
 
@@ -47,24 +57,31 @@ export default function MobilePOS() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+        <div className="grid md:grid-cols-2 gap-6 pt-8">
           {features.map((feature, index) => (
             <div
               key={index}
               className="group relative bg-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-elegant transition-all duration-300"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-7 h-7 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold text-foreground">
-                  {feature.title}
-                </h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="flex-1 space-y-3">
+                  <h3 className="text-2xl font-bold text-foreground">
+                    {feature.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {feature.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-2 text-muted-foreground">
+                        <span className="text-primary mt-1">•</span>
+                        <span className="text-base leading-relaxed">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

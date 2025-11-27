@@ -431,8 +431,8 @@ export default function Home() {
               { icon: Utensils, title: "Kitchen Receives", desc: "Order goes directly to kitchen/bar" },
               { icon: CreditCard, title: "Pay & Go", desc: "Pay securely when ready to leave" },
             ].map((step, i) => (
-              <div key={i} className="relative animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all text-center">
+              <div key={i} className="relative animate-fade-in h-full" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all text-center h-full flex flex-col">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
@@ -440,7 +440,7 @@ export default function Home() {
                     {i + 1}
                   </div>
                   <h3 className="text-xl font-bold mb-3">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.desc}</p>
+                  <p className="text-muted-foreground flex-grow">{step.desc}</p>
                 </div>
               </div>
             ))}

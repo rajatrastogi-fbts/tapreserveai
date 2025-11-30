@@ -9,7 +9,9 @@ import {
   Clock, Users, TrendingUp, Zap, Shield, CheckCircle2,
   Smartphone, QrCode, Utensils, CreditCard, Star, BarChart,
   LayoutGrid, FileText, Wifi, TrendingDown, AlertCircle,
-  Timer, DollarSign, ThumbsUp, Sparkles
+  Timer, DollarSign, ThumbsUp, Sparkles, FileQuestion,
+  Wallet, Heart, Gift, Award, Bell, Calendar, Mail, Phone, Globe,
+  ArrowUp, ArrowDown, Quote, Check, Building2
 } from "lucide-react";
 // POS Logos
 import accessPos from "@/assets/pos-logos/access-pos.jpg";
@@ -285,71 +287,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Problems Section */}
+      {/* Problems Section - Restaurants */}
       <section id="problems" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Industry is Struggling</h2>
-            <p className="text-2xl text-primary font-semibold">We Have the Cure.</p>
-          </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="space-y-8 animate-fade-in">
+              <div className="space-y-4">
+                <h2 className="text-5xl md:text-6xl font-bold">
+                  The Industry is <span className="text-destructive">Struggling</span>
+                </h2>
+                <p className="text-2xl text-primary font-semibold">
+                  We Have the Cure.
+                </p>
+              </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div className="space-y-6 animate-fade-in">
-              <h3 className="text-3xl font-bold mb-8">Restaurant Challenges</h3>
-              {[
-                { icon: Users, title: "Labor Shortages", desc: "69% of restaurants facing staffing challenges", source: "National Restaurant Association, 2023" },
-                { icon: TrendingDown, title: "Rising Costs", desc: "Food costs up 25%, labor costs rising faster than revenue" },
-                { icon: Timer, title: "Slow Table Turnover", desc: "Average table turnover: 45-90 minutes, limiting revenue potential" },
-                { icon: AlertCircle, title: "Order Errors", desc: "Manual order taking leads to mistakes, waste, and unhappy customers" },
-              ].map((problem, i) => (
-                <div key={i} className="flex gap-4 bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-elegant transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center">
-                      <problem.icon className="w-6 h-6 text-white" />
+              <div className="space-y-6">
+                {[
+                  { icon: TrendingDown, title: "Crippling Labor Shortages", desc: "62% of operators can't find enough staff", source: "NFIB" },
+                  { icon: DollarSign, title: "Rising Operational Costs", desc: "Wages, rent, and food costs at all-time high" },
+                  { icon: Clock, title: "Slow Table Turnover", desc: "Payment process is the biggest bottleneck" },
+                ].map((problem, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{ animationDelay: `${i * 0.1}s` }}>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
+                      <problem.icon className="w-6 h-6 text-destructive" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{problem.title}</h3>
+                      <p className="text-muted-foreground mt-1">{problem.desc}</p>
+                      {problem.source && (
+                        <p className="text-sm text-muted-foreground/60 mt-1">Source: {problem.source}</p>
+                      )}
                     </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">{problem.title}</h4>
-                    <p className="text-muted-foreground mb-1">{problem.desc}</p>
-                    {problem.source && (
-                      <p className="text-xs text-muted-foreground italic">{problem.source}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-            <div className="animate-fade-in">
-              <img src={problemImage} alt="Restaurant challenges" className="rounded-2xl shadow-elegant w-full" />
+
+            <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-elegant animate-fade-in">
+              <img src={problemImage} alt="Stressed restaurant staff" className="w-full h-full object-cover" />
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in order-2 md:order-1">
-              <img src={customerImage} alt="Waiting customers" className="rounded-2xl shadow-elegant w-full" />
+          {/* Problems Section - Diners */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-elegant animate-fade-in order-2 lg:order-1">
+              <img src={customerImage} alt="Impatient customers waiting" className="w-full h-full object-cover" />
             </div>
-            <div className="space-y-6 animate-fade-in order-1 md:order-2">
-              <h3 className="text-3xl font-bold mb-8">Diners Are Impatient</h3>
-              {[
-                { icon: Clock, title: "Long Wait Times", desc: "60% of diners will leave if wait exceeds 15 minutes", source: "OpenTable, 2023" },
-                { icon: AlertCircle, title: "Service Delays", desc: "Average wait to order: 10-15 minutes during peak hours" },
-                { icon: CreditCard, title: "Payment Friction", desc: "Waiting for the bill is the #1 dining frustration", source: "Toast Restaurant Survey, 2023" },
-                { icon: TrendingDown, title: "Poor Experience", desc: "73% won't return after a bad service experience" },
-              ].map((problem, i) => (
-                <div key={i} className="flex gap-4 bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-elegant transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center">
-                      <problem.icon className="w-6 h-6 text-white" />
+
+            <div className="space-y-8 animate-fade-in order-1 lg:order-2">
+              <div className="space-y-4">
+                <h2 className="text-5xl md:text-6xl font-bold">
+                  The Modern Diner is <span className="text-secondary">Impatient</span>
+                </h2>
+                <p className="text-2xl text-muted-foreground">
+                  And We Don't Blame Them.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {[
+                  { icon: Clock, title: '"Where\'s our server?"', desc: "The anxiety of waiting to order or get the bill" },
+                  { icon: CreditCard, title: '"Can we split the bill?"', desc: "The awkward and time-consuming payment process" },
+                  { icon: FileQuestion, title: '"I can\'t read the menu."', desc: "The desire for clarity, photos, and customization" },
+                  { icon: Zap, title: "The Demand for Control", desc: "73% prefer brands offering self-service options", source: "Touchscreen Research" },
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{ animationDelay: `${i * 0.1}s` }}>
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+                      <item.icon className="w-6 h-6 text-secondary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{item.title}</h3>
+                      <p className="text-muted-foreground mt-1">{item.desc}</p>
+                      {item.source && (
+                        <p className="text-sm text-muted-foreground/60 mt-1">Source: {item.source}</p>
+                      )}
                     </div>
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">{problem.title}</h4>
-                    <p className="text-muted-foreground mb-1">{problem.desc}</p>
-                    {problem.source && (
-                      <p className="text-xs text-muted-foreground italic">{problem.source}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -448,99 +463,249 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20">
+      {/* Enhanced Guest Experience Section */}
+      <section id="guest-experience" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Powerful Features</h2>
-            <p className="text-xl text-muted-foreground">Everything you need to run a modern restaurant</p>
+            <h2 className="text-5xl md:text-6xl font-bold">Enhanced Guest Experience</h2>
+            <p className="text-2xl text-muted-foreground">Delight Every Diner</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
-              { icon: LayoutGrid, title: "Table Management", desc: "Digital floor plans with real-time status and reservations" },
-              { icon: Users, title: "Waiter Management", desc: "Smart assignment, performance tracking, and workload balancing" },
-              { icon: FileText, title: "KOT/BOT Management", desc: "Instant printing to kitchen/bar with real-time order tracking" },
-              { icon: Smartphone, title: "Mobile POS", desc: "Turn any device into a powerful point of sale system" },
-              { icon: BarChart, title: "Analytics Dashboard", desc: "Real-time insights into sales, performance, and trends" },
-              { icon: Shield, title: "Secure Payments", desc: "Bank-grade encryption and PCI-DSS compliance" },
-            ].map((feature, i) => (
-              <div key={i} className="bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center mb-6 shadow-lg">
-                  <feature.icon className="w-7 h-7 text-white" />
+              { icon: QrCode, title: "Contactless Convenience", desc: "Simply scan the QR code at your table to access the full menu instantly. No app download required.", highlight: "No app needed" },
+              { icon: Clock, title: "Quick Turnaround", desc: "Guests enjoy meals promptly, significantly reducing wait times and enhancing satisfaction.", highlight: "Faster service" },
+              { icon: Wallet, title: "Easy Payments", desc: "Seamless payments through QR Scanning make the checkouts quick and hassle free for diners.", highlight: "Hassle free" },
+              { icon: Sparkles, title: "Personalized Experience", desc: "Customized menus and offers enhance the dining experience, making it unique for every guest.", highlight: "Tailored dining" },
+            ].map((experience, i) => (
+              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="absolute -top-4 -right-4 px-4 py-2 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
+                  {experience.highlight}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.desc}</p>
+                <div className="flex flex-col items-center text-center gap-6">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <experience.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold">{experience.title}</h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">{experience.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Value for Restaurants Section */}
+      <section id="value" className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold">Value for Restaurants</h2>
+            <p className="text-2xl text-muted-foreground">Grow Your Business</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { icon: Zap, title: "Increased Efficiency", desc: "Streamlined operations lead to faster service, empowering staff to focus on customer satisfaction.", highlight: "Faster operations" },
+              { icon: TrendingUp, title: "Higher Revenue", desc: "Enhanced guest experiences translate into repeat customers, driving overall revenue growth for restaurants.", highlight: "More revenue" },
+              { icon: BarChart, title: "Data Driven Insights", desc: "Comprehensive analytics provide actionable insights enabling strategic decisions that enhance operations and profits.", highlight: "Smart decisions" },
+            ].map((value, i) => (
+              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="absolute -top-4 -right-4 px-4 py-2 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
+                  {value.highlight}
+                </div>
+                <div className="flex flex-col items-center text-center gap-6">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold">{value.title}</h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">{value.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Transform Your Business Section */}
+      <section id="transform" className="py-20 bg-gradient-hero text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold">Transform Your Business</h2>
+            <p className="text-2xl text-white/90">One Table at a Time</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+            {[
+              {
+                icon: TrendingUp,
+                iconBg: "bg-primary/10",
+                iconColor: "text-primary",
+                title: "Boost Revenue",
+                metrics: [
+                  { label: "Table turnover", value: "+25%", trend: "up" },
+                  { label: "Average order value", value: "+20%", trend: "up" },
+                ],
+              },
+              {
+                icon: DollarSign,
+                iconBg: "bg-secondary/10",
+                iconColor: "text-secondary",
+                title: "Reduce Costs",
+                metrics: [
+                  { label: "Ordering errors", value: "-90%", trend: "down" },
+                  { label: "Menu printing costs", value: "-100%", trend: "down" },
+                ],
+              },
+              {
+                icon: Star,
+                iconBg: "bg-accent/10",
+                iconColor: "text-accent",
+                title: "Enhance Experience",
+                metrics: [
+                  { label: "Customer satisfaction", value: "+35%", trend: "up" },
+                  { label: "Staff efficiency", value: "+40%", trend: "up" },
+                ],
+              },
+              {
+                icon: Users,
+                iconBg: "bg-muted",
+                iconColor: "text-foreground",
+                title: "Own Your Customers",
+                metrics: [
+                  { label: "Direct marketing list", value: "100%", trend: "up" },
+                  { label: "Aggregator dependence", value: "-80%", trend: "down" },
+                ],
+              },
+            ].map((benefit, i) => (
+              <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="flex items-start gap-6 mb-6">
+                  <div className={`flex-shrink-0 w-16 h-16 rounded-2xl ${benefit.iconBg} flex items-center justify-center`}>
+                    <benefit.icon className={`w-8 h-8 ${benefit.iconColor}`} />
+                  </div>
+                  <h3 className="text-3xl font-bold flex-1 pt-3">{benefit.title}</h3>
+                </div>
+                <div className="space-y-4">
+                  {benefit.metrics.map((metric, idx) => (
+                    <div key={idx} className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
+                      <span className="text-lg text-white/90">{metric.label}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="text-2xl font-bold">{metric.value}</span>
+                        {metric.trend === "up" ? (
+                          <ArrowUp className="w-5 h-5 text-green-400" />
+                        ) : (
+                          <ArrowDown className="w-5 h-5 text-green-400" />
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Mobile POS Details */}
-          <div className="bg-gradient-subtle rounded-3xl p-12">
-            <h3 className="text-3xl font-bold mb-8 text-center">Mobile POS Solution</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                {
-                  icon: LayoutGrid,
-                  title: "Table Management System",
-                  items: [
-                    "Digital floor plan with drag-and-drop",
-                    "Real-time table status & occupancy",
-                    "Online reservations & waitlist",
-                    "Customer preferences & special occasions"
-                  ]
-                },
-                {
-                  icon: Users,
-                  title: "Waiter Management",
-                  items: [
-                    "Automatic section-wise table assignment",
-                    "Workload balancing & performance tracking",
-                    "Commission tracking for upselling",
-                    "Waiter KPIs & customer feedback scores"
-                  ]
-                },
-                {
-                  icon: FileText,
-                  title: "KOT/BOT Management",
-                  items: [
-                    "Instant printing to kitchen & bar",
-                    "Course-wise order timing control",
-                    "Real-time order status tracking",
-                    "Automatic alerts for delayed orders"
-                  ]
-                },
-                {
-                  icon: TrendingUp,
-                  title: "Advanced Features",
-                  items: [
-                    "Menu engineering & profitability analysis",
-                    "Cooking preferences & allergy alerts",
-                    "Smart upselling & combo suggestions",
-                    "Real-time menu updates & pricing"
-                  ]
-                },
-              ].map((feature, i) => (
-                <div key={i} className="bg-card border border-border rounded-2xl p-6 shadow-soft">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-hero flex items-center justify-center shadow-lg">
-                      <feature.icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div className="flex-1 space-y-3">
-                      <h4 className="text-2xl font-bold">{feature.title}</h4>
-                      <ul className="space-y-2">
-                        {feature.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start gap-2 text-muted-foreground">
-                            <span className="text-primary mt-1">•</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+          <div className="text-center pt-8 mt-8 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-fade-in">
+            <p className="text-xl md:text-2xl leading-relaxed">
+              The result? A <strong>direct impact</strong> on your most important metrics. 
+              More revenue per table, lower operational costs, and happier customers and staff.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Features Section */}
+      <section id="features" className="py-20 bg-gradient-subtle">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold">Advanced Features</h2>
+            <p className="text-2xl text-muted-foreground">Built for Modern Restaurants</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {[
+              {
+                icon: Users,
+                title: "Collaborative Order",
+                desc: "Multi-user ordering allows multiple people to scan the same code and add items to the shared table order simultaneously. Live tab syncs - the cart stays open until payment is finalized, guests can keep ordering rounds freely.",
+              },
+              {
+                icon: DollarSign,
+                title: "Flexible Payment",
+                desc: "Split bill functionality lets diners split the check by custom value or equal amounts instantly. Table lock finalizes the session, preventing further orders. Smart tipping with option to pay tip as % of total bill or custom value.",
+              },
+              {
+                icon: Bell,
+                title: "Order Fulfillment",
+                desc: "Waiters get instant notifications of new orders and can mark items as served with clear table status updates. Cashiers have live oversight to monitor all active orders, with payment control options to manually settle bills for cash payments.",
+              },
+              {
+                icon: LayoutGrid,
+                title: "Table & Menu Management",
+                desc: "Table management system with digital floor plan showing occupied tables, active orders, and payment status in real-time. Real-time menu updates for items, prices, and out-of-stock toggles. Analytics dashboard tracks sales, table turnover rates, and staff performance metrics.",
+              },
+            ].map((feature, i) => (
+              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                <div className="flex items-start gap-6">
+                  <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1 space-y-3">
+                    <h3 className="text-2xl font-bold">{feature.title}</h3>
+                    <p className="text-lg text-muted-foreground leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Loyalty Section */}
+      <section id="loyalty" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-5xl md:text-6xl font-bold">Customer Loyalty Program</h2>
+            <p className="text-2xl text-muted-foreground">Drive Repeat Business</p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card border border-border rounded-2xl p-12 shadow-elegant animate-fade-in">
+              <div className="flex items-center justify-center gap-8 mb-8">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg">
+                  <Heart className="w-10 h-10 text-white" />
+                </div>
+                <div className="w-20 h-20 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg">
+                  <Gift className="w-10 h-10 text-white" />
+                </div>
+                <div className="w-20 h-20 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg">
+                  <Award className="w-10 h-10 text-white" />
+                </div>
+              </div>
+
+              <div className="text-center space-y-6">
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Fully configurable to each merchant's setup, enabling tailored rewards and earning rules.
+                </p>
+                <p className="text-2xl font-semibold">
+                  Customers automatically earn points whenever they make payments through the platform.
+                </p>
+                <div className="pt-6">
+                  <div className="inline-block px-8 py-4 bg-gradient-hero rounded-full text-white text-lg font-semibold shadow-lg">
+                    Build lasting customer relationships
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className="text-center pt-8 animate-fade-in">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              Turn first-time visitors into <strong className="text-foreground">loyal advocates</strong>. 
+              Our smart loyalty system rewards customers automatically, driving repeat visits and increasing lifetime value.
+            </p>
           </div>
         </div>
       </section>
@@ -591,53 +756,172 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="py-20">
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Proven Results</h2>
-            <p className="text-xl text-muted-foreground">Real impact on your bottom line</p>
+            <h2 className="text-5xl md:text-6xl font-bold">Technology That Pays for Itself</h2>
+            <p className="text-2xl text-muted-foreground">Flexible Pricing Plans</p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {[
-              { icon: DollarSign, value: "30%", label: "Labor Cost Reduction" },
-              { icon: TrendingUp, value: "25%", label: "Increased Table Turnover" },
-              { icon: Star, value: "20%", label: "Higher Order Values" },
-              { icon: ThumbsUp, value: "95%", label: "Customer Satisfaction" },
-            ].map((stat, i) => (
-              <div key={i} className="bg-card border border-border rounded-2xl p-8 text-center shadow-soft hover:shadow-elegant transition-all animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div className="w-16 h-16 rounded-full bg-gradient-hero flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+              {
+                name: "Starter",
+                icon: Zap,
+                price: "2.5%",
+                subtitle: "per transaction",
+                description: "Perfect for small cafes and food trucks",
+                features: [
+                  "QR code ordering & payment",
+                  "Digital menu management",
+                  "Basic analytics",
+                  "Email support",
+                  "No monthly fee",
+                ],
+                cta: "Get Started",
+                popular: false,
+              },
+              {
+                name: "Growth",
+                icon: TrendingUp,
+                price: "1.9%",
+                subtitle: "per transaction + $99/mo",
+                description: "Adds advanced analytics and loyalty features",
+                features: [
+                  "Everything in Starter",
+                  "Advanced analytics dashboard",
+                  "Loyalty program integration",
+                  "Customization options",
+                  "Priority support",
+                  "Multi-location support",
+                ],
+                cta: "Start Free Trial",
+                popular: true,
+              },
+              {
+                name: "Enterprise",
+                icon: Building2,
+                price: "Custom",
+                subtitle: "tailored pricing",
+                description: "For multi-location chains with full integration",
+                features: [
+                  "Everything in Growth",
+                  "Full API access",
+                  "White-label options",
+                  "Dedicated account manager",
+                  "Custom integrations",
+                  "SLA guarantee",
+                ],
+                cta: "Contact Sales",
+                popular: false,
+              },
+            ].map((plan, i) => (
+              <div key={i} className={`relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in ${
+                plan.popular ? "border-2 border-primary ring-4 ring-primary/10" : "border border-border"
+              }`} style={{ animationDelay: `${i * 0.1}s` }}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
+                    Most Popular
+                  </div>
+                )}
+
+                <div className="space-y-6">
+                  <div className={`w-14 h-14 rounded-2xl ${plan.popular ? 'bg-gradient-hero' : 'bg-muted'} flex items-center justify-center`}>
+                    <plan.icon className={`w-7 h-7 ${plan.popular ? 'text-white' : 'text-foreground'}`} />
+                  </div>
+
+                  <div>
+                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline gap-2 mb-2">
+                      <span className="text-4xl font-bold">{plan.price}</span>
+                      <span className="text-muted-foreground">{plan.subtitle}</span>
+                    </div>
+                    <p className="text-muted-foreground">{plan.description}</p>
+                  </div>
+
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button
+                    className={`w-full ${
+                      plan.popular
+                        ? "bg-gradient-hero text-white hover:opacity-90 shadow-lg"
+                        : "bg-secondary text-secondary-foreground"
+                    }`}
+                    size="lg"
+                  >
+                    {plan.cta}
+                  </Button>
                 </div>
-                <div className="text-4xl font-bold mb-2 text-primary">{stat.value}</div>
-                <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-fade-in">
-              <img src={successImage} alt="Successful restaurant" className="rounded-2xl shadow-elegant w-full" />
+          <div className="text-center pt-8 animate-fade-in">
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
+              We believe in a pricing model that <strong className="text-foreground">aligns with your success</strong>. 
+              There are no heavy upfront costs. <strong className="text-foreground">We grow when you grow.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="text-center space-y-4 animate-fade-in">
+              <h2 className="text-5xl md:text-6xl font-bold">What Our Partners Say</h2>
+              <p className="text-2xl text-muted-foreground">Success Stories</p>
             </div>
-            <div className="space-y-6 animate-fade-in">
-              <h3 className="text-3xl font-bold mb-6">Why Restaurants Love Us</h3>
+
+            <div className="relative bg-gradient-hero rounded-3xl p-12 md:p-16 shadow-elegant text-white animate-fade-in">
+              <Quote className="absolute top-8 left-8 w-16 h-16 text-white/20" />
+              
+              <div className="relative z-10 space-y-8">
+                <div className="flex gap-1 justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-6 h-6 fill-current" />
+                  ))}
+                </div>
+
+                <blockquote className="text-2xl md:text-3xl leading-relaxed text-center font-light">
+                  TapReserve.AI helped us increase our Friday night turnover by{" "}
+                  <strong className="font-bold">30%</strong>. Our servers are less stressed 
+                  and can now focus on providing exceptional service. It's a{" "}
+                  <strong className="font-bold">game-changer</strong>.
+                </blockquote>
+
+                <div className="flex items-center justify-center gap-6 pt-6">
+                  <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl font-bold">
+                    MG
+                  </div>
+                  <div className="text-left">
+                    <div className="text-xl font-bold">Maria Gonzalez</div>
+                    <div className="text-white/80">Owner of "Bella Cucina"</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 pt-4">
               {[
-                { icon: Zap, title: "Faster Service", desc: "Orders reach the kitchen instantly, reducing wait times dramatically" },
-                { icon: Users, title: "Better Staff Utilization", desc: "Free your team from order-taking to focus on hospitality" },
-                { icon: TrendingUp, title: "Increased Revenue", desc: "Smart upselling and faster table turns boost profitability" },
-                { icon: Shield, title: "Error-Free Orders", desc: "No more miscommunication between servers and kitchen" },
-              ].map((benefit, i) => (
-                <div key={i} className="flex gap-4 bg-card border border-border rounded-xl p-6 shadow-soft hover:shadow-elegant transition-all">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-hero flex items-center justify-center">
-                      <benefit.icon className="w-6 h-6 text-white" />
-                    </div>
+                { stat: "30%", label: "Increase in turnover" },
+                { stat: "95%", label: "Server satisfaction" },
+                { stat: "4.8/5", label: "Customer rating" },
+              ].map((item, i) => (
+                <div key={i} className="bg-card border border-border rounded-xl p-6 text-center shadow-soft animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                  <div className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">
+                    {item.stat}
                   </div>
-                  <div>
-                    <h4 className="font-bold text-lg mb-1">{benefit.title}</h4>
-                    <p className="text-muted-foreground">{benefit.desc}</p>
-                  </div>
+                  <div className="text-muted-foreground">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -646,19 +930,75 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section id="cta" className="py-20 bg-gradient-hero text-white">
-        <div className="container mx-auto px-4 text-center animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Restaurant?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join the future of dining with TapReserve.AI. Get started today with our exclusive Network International partnership.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-              Schedule a Demo
-            </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-primary">
-              Contact Sales
-            </Button>
+      <section 
+        id="cta" 
+        className="py-20 relative min-h-[600px] flex items-center justify-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${successImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container mx-auto px-4 text-center text-white animate-fade-in">
+          <div className="space-y-6 mb-12">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              The Future is Contactless.
+              <br />
+              <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
+                The Future is TapReserve.AI.
+              </span>
+            </h2>
+            <p className="text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto">
+              Let's Build the Future of Your Restaurant, Together
+            </p>
+          </div>
+
+          <div className="max-w-2xl mx-auto space-y-8">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-12 shadow-elegant">
+              <div className="w-20 h-20 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-6">
+                <Calendar className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold mb-4">Schedule a Demo</h3>
+              <p className="text-xl text-white/80 leading-relaxed mb-8">
+                See TapReserve.AI in action with a personalized walkthrough
+              </p>
+              <Button
+                size="lg"
+                className="bg-white text-foreground hover:bg-white/90 shadow-elegant text-lg px-10 py-6 h-auto font-semibold"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Schedule Demo Now
+              </Button>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
+              <h4 className="text-xl font-bold mb-4">Contact Information</h4>
+              <div className="flex flex-col gap-4 text-white/90">
+                <div className="flex items-center justify-center gap-2">
+                  <Globe className="w-5 h-5 flex-shrink-0" />
+                  <a href="https://tapreserve.storecomm.ai" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                    https://tapreserve.storecomm.ai
+                  </a>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Mail className="w-5 h-5 flex-shrink-0" />
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    <a href="mailto:rajat@fbts.in" className="hover:text-white transition-colors">rajat@fbts.in</a>
+                    <span>||</span>
+                    <a href="mailto:rajat@storecomm.ai" className="hover:text-white transition-colors">rajat@storecomm.ai</a>
+                  </div>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <Phone className="w-5 h-5 flex-shrink-0" />
+                  <a href="tel:+971545367475" className="hover:text-white transition-colors">+971 545367475</a>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-lg text-white/80 max-w-4xl mx-auto pt-4">
+              The shift to digital, contactless experiences is not a trend; it's the new standard. 
+              With TapReserve.AI, you're not just keeping up; <strong className="text-white">you're leaping ahead</strong>.
+            </p>
           </div>
         </div>
       </section>
@@ -676,6 +1016,7 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
+                <li><button onClick={() => document.getElementById('guest-experience')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">Guest Experience</button></li>
                 <li><button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">Features</button></li>
                 <li><button onClick={() => document.getElementById('pos-integrations')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">POS Integrations</button></li>
                 <li><button onClick={() => window.location.href = '/presentation'} className="text-muted-foreground hover:text-foreground">View Presentation</button></li>
@@ -683,9 +1024,12 @@ export default function Home() {
             </div>
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
-              <p className="text-muted-foreground">
-                Exclusively with Network International LLC in UAE
-              </p>
+              <div className="space-y-2 text-muted-foreground text-sm">
+                <p>Exclusively with Network International LLC in UAE</p>
+                <p><a href="https://tapreserve.storecomm.ai" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">tapreserve.storecomm.ai</a></p>
+                <p><a href="mailto:rajat@storecomm.ai" className="hover:text-foreground">rajat@storecomm.ai</a></p>
+                <p><a href="tel:+971545367475" className="hover:text-foreground">+971 545367475</a></p>
+              </div>
             </div>
           </div>
           <div className="text-center text-muted-foreground border-t border-border pt-8">

@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import heroImage from "@/assets/hero-dining.jpg";
+import tapreserveLogo from "@/assets/tapreserve-logo.png";
 import customerImage from "@/assets/customer-wait.jpg";
 import problemImage from "@/assets/problem-stressed.jpg";
 import qrImage from "@/assets/qr-scan.jpg";
@@ -270,9 +271,13 @@ export default function Home() {
         }}
       >
         <div className="container mx-auto px-4 text-center text-white animate-fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
-            TapReserve.AI
-          </h1>
+          <div className="flex justify-center mb-6">
+            <img 
+              src={tapreserveLogo} 
+              alt="TapReserve.AI" 
+              className="h-20 md:h-28 lg:h-36 w-auto brightness-0 invert"
+            />
+          </div>
           <p className="text-2xl md:text-4xl font-light mb-4">
             The Future of Dining is Here
           </p>
@@ -1008,7 +1013,11 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">TapReserve.AI</h3>
+              <img 
+                src={tapreserveLogo} 
+                alt="TapReserve.AI" 
+                className="h-12 w-auto mb-4"
+              />
               <p className="text-muted-foreground">
                 Revolutionizing restaurant operations with intelligent self-ordering technology.
               </p>

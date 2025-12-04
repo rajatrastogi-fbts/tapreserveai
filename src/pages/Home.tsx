@@ -272,11 +272,13 @@ export default function Home() {
       >
         <div className="container mx-auto px-4 text-center text-white animate-fade-in">
           <div className="flex justify-center mb-6">
-            <img 
-              src={tapreserveLogo} 
-              alt="TapReserve.AI" 
-              className="h-20 md:h-28 lg:h-36 w-auto brightness-0 invert"
-            />
+            <div className="h-24 md:h-32 lg:h-40 overflow-hidden flex items-center">
+              <img 
+                src={tapreserveLogo} 
+                alt="TapReserve.AI" 
+                className="h-[200%] w-auto object-contain brightness-0 invert"
+              />
+            </div>
           </div>
           <p className="text-2xl md:text-4xl font-light mb-4">
             The Future of Dining is Here
@@ -1013,11 +1015,13 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <img 
-                src={tapreserveLogo} 
-                alt="TapReserve.AI" 
-                className="h-20 w-auto mb-4"
-              />
+              <div className="h-16 overflow-hidden flex items-center mb-4">
+                <img 
+                  src={tapreserveLogo} 
+                  alt="TapReserve.AI" 
+                  className="h-[200%] w-auto object-contain"
+                />
+              </div>
               <p className="text-muted-foreground">
                 Revolutionizing restaurant operations with intelligent self-ordering technology.
               </p>

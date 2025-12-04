@@ -1236,7 +1236,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <div className="h-48 overflow-hidden flex items-center mb-4">
+              <div className="h-[140px] overflow-hidden flex items-center mb-4">
                 <img src={tapreserveLogo} alt="TapReserve.AI" className="h-[250%] w-auto object-contain" />
               </div>
               <p className="text-muted-foreground">

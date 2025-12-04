@@ -1016,7 +1016,7 @@ export default function Home() {
               <img 
                 src={tapreserveLogo} 
                 alt="TapReserve.AI" 
-                className="h-16 w-auto mb-4"
+                className="h-48 w-auto mb-4"
               />
               <p className="text-muted-foreground">
                 Revolutionizing restaurant operations with intelligent self-ordering technology.

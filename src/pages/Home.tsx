@@ -6,14 +6,7 @@ import problemImage from "@/assets/problem-stressed.jpg";
 import qrImage from "@/assets/qr-scan.jpg";
 import successImage from "@/assets/success-restaurant.jpg";
 import { Button } from "@/components/ui/button";
-import { 
-  Clock, Users, TrendingUp, Zap, Shield, CheckCircle2,
-  Smartphone, QrCode, Utensils, CreditCard, Star, BarChart,
-  LayoutGrid, FileText, Wifi, TrendingDown, AlertCircle,
-  Timer, DollarSign, ThumbsUp, Sparkles, FileQuestion,
-  Wallet, Heart, Gift, Award, Bell, Calendar, Mail, Phone, Globe,
-  ArrowUp, ArrowDown, Quote, Check, Building2
-} from "lucide-react";
+import { Clock, Users, TrendingUp, Zap, Shield, CheckCircle2, Smartphone, QrCode, Utensils, CreditCard, Star, BarChart, LayoutGrid, FileText, Wifi, TrendingDown, AlertCircle, Timer, DollarSign, ThumbsUp, Sparkles, FileQuestion, Wallet, Heart, Gift, Award, Bell, Calendar, Mail, Phone, Globe, ArrowUp, ArrowDown, Quote, Check, Building2 } from "lucide-react";
 // POS Logos
 import accessPos from "@/assets/pos-logos/access-pos.jpg";
 import adloggs from "@/assets/pos-logos/adloggs.jpg";
@@ -133,151 +126,375 @@ import yotto from "@/assets/pos-logos/yotto.png";
 import yourbuddy from "@/assets/pos-logos/yourbuddy.jpg";
 import zentrades from "@/assets/pos-logos/zentrades.png";
 import threePos from "@/assets/pos-logos/3spos.webp";
-
-const allPOSSystems = [
-  { name: "Access POS", logo: accessPos },
-  { name: "Adloggs", logo: adloggs },
-  { name: "Agilysys", logo: agilysys },
-  { name: "All POS", logo: allpos },
-  { name: "Amepos", logo: amepos },
-  { name: "App4", logo: app4 },
-  { name: "BestPOS/FnB 360", logo: bestpos },
-  { name: "Billberry", logo: billberry },
-  { name: "BIMPOS", logo: bimpos },
-  { name: "Bitsila", logo: bitsila },
-  { name: "Biz1Book", logo: biz1book },
-  { name: "Blue Lotus 360", logo: bluelotus },
-  { name: "Bravery", logo: bravery },
-  { name: "Bridge POS", logo: bridge },
-  { name: "Captain Pad", logo: captainpad },
-  { name: "Cibo POS", logo: cibo },
-  { name: "Ciferon", logo: ciferon },
-  { name: "CW Suite", logo: cwsuite },
-  { name: "Cypheron", logo: cypheron },
-  { name: "DataMate", logo: datamate },
-  { name: "Devourin", logo: devourin },
-  { name: "DGtera", logo: dgtera },
-  { name: "DigiRestro", logo: digirestro },
-  { name: "Digitory", logo: digitory },
-  { name: "DineOrder", logo: dineorder },
-  { name: "DinePlan", logo: dineplan },
-  { name: "Dinner Daddy", logo: dinnerdaddy },
-  { name: "Dino POS", logo: dinopos },
-  { name: "E-Retail", logo: eretail },
-  { name: "Ezee", logo: ezee },
-  { name: "Flipdish", logo: flipdish },
-  { name: "Flip Office", logo: flipoffice },
-  { name: "FOAPS", logo: foaps },
-  { name: "Fodista", logo: fodista },
-  { name: "Foodics", logo: foodics },
-  { name: "Fork POS", logo: forkpos },
-  { name: "Fusion", logo: fusion },
-  { name: "G5 POS", logo: g5pos },
-  { name: "Geidea", logo: geidea },
-  { name: "GoFrugal", logo: gofrugal },
-  { name: "Grafterr", logo: grafterr },
-  { name: "Hungerbox", logo: hungerbox },
-  { name: "iDine", logo: idine },
-  { name: "JPOS", logo: jpos },
-  { name: "Kayana", logo: kayana },
-  { name: "Kuber", logo: kuber },
-  { name: "Kurve", logo: kurve },
-  { name: "Lightspeed", logo: lightspeed },
-  { name: "LS Retail", logo: lsretail },
-  { name: "Lucid", logo: lucid },
-  { name: "Menew", logo: menew },
-  { name: "Micros Oracle", logo: microsOracle },
-  { name: "Micros RES 3700", logo: microsRes3700 },
-  { name: "My Genie", logo: mygenie },
-  { name: "MyMenu", logo: mymenu },
-  { name: "My Order Box", logo: myorderbox },
-  { name: "NCR BSL", logo: ncrBsl },
-  { name: "Nuba Soft", logo: nubaSoft },
-  { name: "OCIM", logo: ocim },
-  { name: "Odoo", logo: odoo },
-  { name: "Omak POS", logo: omakPos },
-  { name: "Omega POS", logo: omegaPos },
-  { name: "Parbrink", logo: parbrink },
-  { name: "Phenix", logo: phenix },
-  { name: "Phylo", logo: phylo },
-  { name: "Polaris", logo: polaris },
-  { name: "Posbytz", logo: posbytz },
-  { name: "Posify", logo: posify },
-  { name: "Posit Easy", logo: positeasy },
-  { name: "Prologic", logo: prologic },
-  { name: "QO", logo: qo },
-  { name: "QPOS", logo: qpos },
-  { name: "QR Key", logo: qrkey },
-  { name: "Queue Buster", logo: queuebuster },
-  { name: "Radyes", logo: radyes },
-  { name: "Rancelab", logo: rancelab },
-  { name: "Raw Nest", logo: rawnest },
-  { name: "Resto Suite", logo: restosuite },
-  { name: "Revel", logo: revel },
-  { name: "Romio", logo: romio },
-  { name: "Royal POS", logo: royalpos },
-  { name: "Saag", logo: saag },
-  { name: "Sahl Hub", logo: sahlhub },
-  { name: "Sapaad", logo: sapaad },
-  { name: "Semnox", logo: semnox },
-  { name: "Sequential", logo: sequential },
-  { name: "Sero", logo: sero },
-  { name: "Sigmoss", logo: sigmoss },
-  { name: "Simple Touch", logo: simpletouch },
-  { name: "Smart POS", logo: smartpos },
-  { name: "SmartQ", logo: smartq },
-  { name: "Sparktech", logo: sparktech },
-  { name: "Speque", logo: speque },
-  { name: "Spotlight", logo: spotlight },
-  { name: "Square", logo: square },
-  { name: "Squirrel", logo: squirrel },
-  { name: "Stacked In", logo: stackedin },
-  { name: "Summer POS", logo: summerpos },
-  { name: "SumUp", logo: sumup },
-  { name: "Supy", logo: supy },
-  { name: "Svika", logo: svika },
-  { name: "Swiggy", logo: swiggy },
-  { name: "Synques", logo: synques },
-  { name: "Syrve", logo: syrve },
-  { name: "Tevalis", logo: tevalis },
-  { name: "The On Demand", logo: theondemand },
-  { name: "Think Softwares", logo: thinksoftwares },
-  { name: "TM Bill", logo: tmbill },
-  { name: "Toast", logo: toast },
-  { name: "TouchBistro", logo: touchbistro },
-  { name: "Tray", logo: tray },
-  { name: "Urbandart", logo: urbandart },
-  { name: "Vada", logo: vada },
-  { name: "Vertex", logo: vertex },
-  { name: "Yotto", logo: yotto },
-  { name: "Your Buddy", logo: yourbuddy },
-  { name: "Zentrades", logo: zentrades },
-  { name: "3S POS", logo: threePos },
-];
-
+const allPOSSystems = [{
+  name: "Access POS",
+  logo: accessPos
+}, {
+  name: "Adloggs",
+  logo: adloggs
+}, {
+  name: "Agilysys",
+  logo: agilysys
+}, {
+  name: "All POS",
+  logo: allpos
+}, {
+  name: "Amepos",
+  logo: amepos
+}, {
+  name: "App4",
+  logo: app4
+}, {
+  name: "BestPOS/FnB 360",
+  logo: bestpos
+}, {
+  name: "Billberry",
+  logo: billberry
+}, {
+  name: "BIMPOS",
+  logo: bimpos
+}, {
+  name: "Bitsila",
+  logo: bitsila
+}, {
+  name: "Biz1Book",
+  logo: biz1book
+}, {
+  name: "Blue Lotus 360",
+  logo: bluelotus
+}, {
+  name: "Bravery",
+  logo: bravery
+}, {
+  name: "Bridge POS",
+  logo: bridge
+}, {
+  name: "Captain Pad",
+  logo: captainpad
+}, {
+  name: "Cibo POS",
+  logo: cibo
+}, {
+  name: "Ciferon",
+  logo: ciferon
+}, {
+  name: "CW Suite",
+  logo: cwsuite
+}, {
+  name: "Cypheron",
+  logo: cypheron
+}, {
+  name: "DataMate",
+  logo: datamate
+}, {
+  name: "Devourin",
+  logo: devourin
+}, {
+  name: "DGtera",
+  logo: dgtera
+}, {
+  name: "DigiRestro",
+  logo: digirestro
+}, {
+  name: "Digitory",
+  logo: digitory
+}, {
+  name: "DineOrder",
+  logo: dineorder
+}, {
+  name: "DinePlan",
+  logo: dineplan
+}, {
+  name: "Dinner Daddy",
+  logo: dinnerdaddy
+}, {
+  name: "Dino POS",
+  logo: dinopos
+}, {
+  name: "E-Retail",
+  logo: eretail
+}, {
+  name: "Ezee",
+  logo: ezee
+}, {
+  name: "Flipdish",
+  logo: flipdish
+}, {
+  name: "Flip Office",
+  logo: flipoffice
+}, {
+  name: "FOAPS",
+  logo: foaps
+}, {
+  name: "Fodista",
+  logo: fodista
+}, {
+  name: "Foodics",
+  logo: foodics
+}, {
+  name: "Fork POS",
+  logo: forkpos
+}, {
+  name: "Fusion",
+  logo: fusion
+}, {
+  name: "G5 POS",
+  logo: g5pos
+}, {
+  name: "Geidea",
+  logo: geidea
+}, {
+  name: "GoFrugal",
+  logo: gofrugal
+}, {
+  name: "Grafterr",
+  logo: grafterr
+}, {
+  name: "Hungerbox",
+  logo: hungerbox
+}, {
+  name: "iDine",
+  logo: idine
+}, {
+  name: "JPOS",
+  logo: jpos
+}, {
+  name: "Kayana",
+  logo: kayana
+}, {
+  name: "Kuber",
+  logo: kuber
+}, {
+  name: "Kurve",
+  logo: kurve
+}, {
+  name: "Lightspeed",
+  logo: lightspeed
+}, {
+  name: "LS Retail",
+  logo: lsretail
+}, {
+  name: "Lucid",
+  logo: lucid
+}, {
+  name: "Menew",
+  logo: menew
+}, {
+  name: "Micros Oracle",
+  logo: microsOracle
+}, {
+  name: "Micros RES 3700",
+  logo: microsRes3700
+}, {
+  name: "My Genie",
+  logo: mygenie
+}, {
+  name: "MyMenu",
+  logo: mymenu
+}, {
+  name: "My Order Box",
+  logo: myorderbox
+}, {
+  name: "NCR BSL",
+  logo: ncrBsl
+}, {
+  name: "Nuba Soft",
+  logo: nubaSoft
+}, {
+  name: "OCIM",
+  logo: ocim
+}, {
+  name: "Odoo",
+  logo: odoo
+}, {
+  name: "Omak POS",
+  logo: omakPos
+}, {
+  name: "Omega POS",
+  logo: omegaPos
+}, {
+  name: "Parbrink",
+  logo: parbrink
+}, {
+  name: "Phenix",
+  logo: phenix
+}, {
+  name: "Phylo",
+  logo: phylo
+}, {
+  name: "Polaris",
+  logo: polaris
+}, {
+  name: "Posbytz",
+  logo: posbytz
+}, {
+  name: "Posify",
+  logo: posify
+}, {
+  name: "Posit Easy",
+  logo: positeasy
+}, {
+  name: "Prologic",
+  logo: prologic
+}, {
+  name: "QO",
+  logo: qo
+}, {
+  name: "QPOS",
+  logo: qpos
+}, {
+  name: "QR Key",
+  logo: qrkey
+}, {
+  name: "Queue Buster",
+  logo: queuebuster
+}, {
+  name: "Radyes",
+  logo: radyes
+}, {
+  name: "Rancelab",
+  logo: rancelab
+}, {
+  name: "Raw Nest",
+  logo: rawnest
+}, {
+  name: "Resto Suite",
+  logo: restosuite
+}, {
+  name: "Revel",
+  logo: revel
+}, {
+  name: "Romio",
+  logo: romio
+}, {
+  name: "Royal POS",
+  logo: royalpos
+}, {
+  name: "Saag",
+  logo: saag
+}, {
+  name: "Sahl Hub",
+  logo: sahlhub
+}, {
+  name: "Sapaad",
+  logo: sapaad
+}, {
+  name: "Semnox",
+  logo: semnox
+}, {
+  name: "Sequential",
+  logo: sequential
+}, {
+  name: "Sero",
+  logo: sero
+}, {
+  name: "Sigmoss",
+  logo: sigmoss
+}, {
+  name: "Simple Touch",
+  logo: simpletouch
+}, {
+  name: "Smart POS",
+  logo: smartpos
+}, {
+  name: "SmartQ",
+  logo: smartq
+}, {
+  name: "Sparktech",
+  logo: sparktech
+}, {
+  name: "Speque",
+  logo: speque
+}, {
+  name: "Spotlight",
+  logo: spotlight
+}, {
+  name: "Square",
+  logo: square
+}, {
+  name: "Squirrel",
+  logo: squirrel
+}, {
+  name: "Stacked In",
+  logo: stackedin
+}, {
+  name: "Summer POS",
+  logo: summerpos
+}, {
+  name: "SumUp",
+  logo: sumup
+}, {
+  name: "Supy",
+  logo: supy
+}, {
+  name: "Svika",
+  logo: svika
+}, {
+  name: "Swiggy",
+  logo: swiggy
+}, {
+  name: "Synques",
+  logo: synques
+}, {
+  name: "Syrve",
+  logo: syrve
+}, {
+  name: "Tevalis",
+  logo: tevalis
+}, {
+  name: "The On Demand",
+  logo: theondemand
+}, {
+  name: "Think Softwares",
+  logo: thinksoftwares
+}, {
+  name: "TM Bill",
+  logo: tmbill
+}, {
+  name: "Toast",
+  logo: toast
+}, {
+  name: "TouchBistro",
+  logo: touchbistro
+}, {
+  name: "Tray",
+  logo: tray
+}, {
+  name: "Urbandart",
+  logo: urbandart
+}, {
+  name: "Vada",
+  logo: vada
+}, {
+  name: "Vertex",
+  logo: vertex
+}, {
+  name: "Yotto",
+  logo: yotto
+}, {
+  name: "Your Buddy",
+  logo: yourbuddy
+}, {
+  name: "Zentrades",
+  logo: zentrades
+}, {
+  name: "3S POS",
+  logo: threePos
+}];
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
-      <section 
-        id="hero" 
-        className="relative min-h-screen flex items-center justify-center pt-20"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}>
         <div className="container mx-auto px-4 text-center text-white animate-fade-in">
           <div className="flex justify-center mb-6">
             <div className="h-24 md:h-32 lg:h-40 overflow-hidden flex items-center">
-              <img 
-                src={tapreserveLogo} 
-                alt="TapReserve.AI" 
-                className="h-[200%] w-auto object-contain brightness-0 invert"
-              />
+              <img src={tapreserveLogo} alt="TapReserve.AI" className="h-[200%] w-auto object-contain brightness-0 invert" />
             </div>
           </div>
           <p className="text-2xl md:text-4xl font-light mb-4">
@@ -309,24 +526,31 @@ export default function Home() {
               </div>
 
               <div className="space-y-6">
-                {[
-                  { icon: TrendingDown, title: "Crippling Labor Shortages", desc: "62% of operators can't find enough staff", source: "NFIB" },
-                  { icon: DollarSign, title: "Rising Operational Costs", desc: "Wages, rent, and food costs at all-time high" },
-                  { icon: Clock, title: "Slow Table Turnover", desc: "Payment process is the biggest bottleneck" },
-                ].map((problem, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{ animationDelay: `${i * 0.1}s` }}>
+                {[{
+                icon: TrendingDown,
+                title: "Crippling Labor Shortages",
+                desc: "62% of operators can't find enough staff",
+                source: "NFIB"
+              }, {
+                icon: DollarSign,
+                title: "Rising Operational Costs",
+                desc: "Wages, rent, and food costs at all-time high"
+              }, {
+                icon: Clock,
+                title: "Slow Table Turnover",
+                desc: "Payment process is the biggest bottleneck"
+              }].map((problem, i) => <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{
+                animationDelay: `${i * 0.1}s`
+              }}>
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-destructive/10 flex items-center justify-center">
                       <problem.icon className="w-6 h-6 text-destructive" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">{problem.title}</h3>
                       <p className="text-muted-foreground mt-1">{problem.desc}</p>
-                      {problem.source && (
-                        <p className="text-sm text-muted-foreground/60 mt-1">Source: {problem.source}</p>
-                      )}
+                      {problem.source && <p className="text-sm text-muted-foreground/60 mt-1">Source: {problem.source}</p>}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
 
@@ -352,25 +576,35 @@ export default function Home() {
               </div>
 
               <div className="space-y-6">
-                {[
-                  { icon: Clock, title: '"Where\'s our server?"', desc: "The anxiety of waiting to order or get the bill" },
-                  { icon: CreditCard, title: '"Can we split the bill?"', desc: "The awkward and time-consuming payment process" },
-                  { icon: FileQuestion, title: '"I can\'t read the menu."', desc: "The desire for clarity, photos, and customization" },
-                  { icon: Zap, title: "The Demand for Control", desc: "73% prefer brands offering self-service options", source: "Touchscreen Research" },
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{ animationDelay: `${i * 0.1}s` }}>
+                {[{
+                icon: Clock,
+                title: '"Where\'s our server?"',
+                desc: "The anxiety of waiting to order or get the bill"
+              }, {
+                icon: CreditCard,
+                title: '"Can we split the bill?"',
+                desc: "The awkward and time-consuming payment process"
+              }, {
+                icon: FileQuestion,
+                title: '"I can\'t read the menu."',
+                desc: "The desire for clarity, photos, and customization"
+              }, {
+                icon: Zap,
+                title: "The Demand for Control",
+                desc: "73% prefer brands offering self-service options",
+                source: "Touchscreen Research"
+              }].map((item, i) => <div key={i} className="flex items-start gap-4 p-4 rounded-lg bg-card border border-border shadow-soft hover:shadow-elegant transition-all duration-300" style={{
+                animationDelay: `${i * 0.1}s`
+              }}>
                     <div className="flex-shrink-0 w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
                       <item.icon className="w-6 h-6 text-secondary" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold">{item.title}</h3>
                       <p className="text-muted-foreground mt-1">{item.desc}</p>
-                      {item.source && (
-                        <p className="text-sm text-muted-foreground/60 mt-1">Source: {item.source}</p>
-                      )}
+                      {item.source && <p className="text-sm text-muted-foreground/60 mt-1">Source: {item.source}</p>}
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -428,11 +662,7 @@ export default function Home() {
             </div>
 
             <div className="relative h-full min-h-[500px] rounded-2xl overflow-hidden shadow-elegant animate-fade-in">
-              <img
-                src={qrImage}
-                alt="Scanning QR code with phone to view menu"
-                className="w-full h-full object-cover"
-              />
+              <img src={qrImage} alt="Scanning QR code with phone to view menu" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -447,13 +677,25 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            {[
-              { icon: QrCode, title: "Scan QR Code", desc: "Guest scans the QR code at their table" },
-              { icon: Smartphone, title: "Browse & Order", desc: "View menu, customize items, and place order" },
-              { icon: Utensils, title: "Kitchen Receives", desc: "Order goes directly to kitchen/bar" },
-              { icon: CreditCard, title: "Pay & Go", desc: "Pay securely when ready to leave" },
-            ].map((step, i) => (
-              <div key={i} className="relative animate-fade-in h-full" style={{ animationDelay: `${i * 0.1}s` }}>
+            {[{
+            icon: QrCode,
+            title: "Scan QR Code",
+            desc: "Guest scans the QR code at their table"
+          }, {
+            icon: Smartphone,
+            title: "Browse & Order",
+            desc: "View menu, customize items, and place order"
+          }, {
+            icon: Utensils,
+            title: "Kitchen Receives",
+            desc: "Order goes directly to kitchen/bar"
+          }, {
+            icon: CreditCard,
+            title: "Pay & Go",
+            desc: "Pay securely when ready to leave"
+          }].map((step, i) => <div key={i} className="relative animate-fade-in h-full" style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
                 <div className="bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all text-center h-full flex flex-col">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center mx-auto mb-6 shadow-lg">
                     <step.icon className="w-8 h-8 text-white" />
@@ -464,8 +706,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-3">{step.title}</h3>
                   <p className="text-muted-foreground flex-grow">{step.desc}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -479,13 +720,29 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {[
-              { icon: QrCode, title: "Contactless Convenience", desc: "Simply scan the QR code at your table to access the full menu instantly. No app download required.", highlight: "No app needed" },
-              { icon: Clock, title: "Quick Turnaround", desc: "Guests enjoy meals promptly, significantly reducing wait times and enhancing satisfaction.", highlight: "Faster service" },
-              { icon: Wallet, title: "Easy Payments", desc: "Seamless payments through QR Scanning make the checkouts quick and hassle free for diners.", highlight: "Hassle free" },
-              { icon: Sparkles, title: "Personalized Experience", desc: "Customized menus and offers enhance the dining experience, making it unique for every guest.", highlight: "Tailored dining" },
-            ].map((experience, i) => (
-              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+            {[{
+            icon: QrCode,
+            title: "Contactless Convenience",
+            desc: "Simply scan the QR code at your table to access the full menu instantly. No app download required.",
+            highlight: "No app needed"
+          }, {
+            icon: Clock,
+            title: "Quick Turnaround",
+            desc: "Guests enjoy meals promptly, significantly reducing wait times and enhancing satisfaction.",
+            highlight: "Faster service"
+          }, {
+            icon: Wallet,
+            title: "Easy Payments",
+            desc: "Seamless payments through QR Scanning make the checkouts quick and hassle free for diners.",
+            highlight: "Hassle free"
+          }, {
+            icon: Sparkles,
+            title: "Personalized Experience",
+            desc: "Customized menus and offers enhance the dining experience, making it unique for every guest.",
+            highlight: "Tailored dining"
+          }].map((experience, i) => <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
                 <div className="absolute -top-4 -right-4 px-4 py-2 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
                   {experience.highlight}
                 </div>
@@ -498,8 +755,7 @@ export default function Home() {
                     <p className="text-lg text-muted-foreground leading-relaxed">{experience.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -513,12 +769,24 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { icon: Zap, title: "Increased Efficiency", desc: "Streamlined operations lead to faster service, empowering staff to focus on customer satisfaction.", highlight: "Faster operations" },
-              { icon: TrendingUp, title: "Higher Revenue", desc: "Enhanced guest experiences translate into repeat customers, driving overall revenue growth for restaurants.", highlight: "More revenue" },
-              { icon: BarChart, title: "Data Driven Insights", desc: "Comprehensive analytics provide actionable insights enabling strategic decisions that enhance operations and profits.", highlight: "Smart decisions" },
-            ].map((value, i) => (
-              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+            {[{
+            icon: Zap,
+            title: "Increased Efficiency",
+            desc: "Streamlined operations lead to faster service, empowering staff to focus on customer satisfaction.",
+            highlight: "Faster operations"
+          }, {
+            icon: TrendingUp,
+            title: "Higher Revenue",
+            desc: "Enhanced guest experiences translate into repeat customers, driving overall revenue growth for restaurants.",
+            highlight: "More revenue"
+          }, {
+            icon: BarChart,
+            title: "Data Driven Insights",
+            desc: "Comprehensive analytics provide actionable insights enabling strategic decisions that enhance operations and profits.",
+            highlight: "Smart decisions"
+          }].map((value, i) => <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
                 <div className="absolute -top-4 -right-4 px-4 py-2 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
                   {value.highlight}
                 </div>
@@ -531,8 +799,7 @@ export default function Home() {
                     <p className="text-lg text-muted-foreground leading-relaxed">{value.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -546,49 +813,65 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            {[
-              {
-                icon: TrendingUp,
-                iconBg: "bg-primary/10",
-                iconColor: "text-primary",
-                title: "Boost Revenue",
-                metrics: [
-                  { label: "Table turnover", value: "+25%", trend: "up" },
-                  { label: "Average order value", value: "+20%", trend: "up" },
-                ],
-              },
-              {
-                icon: DollarSign,
-                iconBg: "bg-secondary/10",
-                iconColor: "text-secondary",
-                title: "Reduce Costs",
-                metrics: [
-                  { label: "Ordering errors", value: "-90%", trend: "down" },
-                  { label: "Menu printing costs", value: "-100%", trend: "down" },
-                ],
-              },
-              {
-                icon: Star,
-                iconBg: "bg-accent/10",
-                iconColor: "text-accent",
-                title: "Enhance Experience",
-                metrics: [
-                  { label: "Customer satisfaction", value: "+35%", trend: "up" },
-                  { label: "Staff efficiency", value: "+40%", trend: "up" },
-                ],
-              },
-              {
-                icon: Users,
-                iconBg: "bg-muted",
-                iconColor: "text-foreground",
-                title: "Own Your Customers",
-                metrics: [
-                  { label: "Direct marketing list", value: "100%", trend: "up" },
-                  { label: "Aggregator dependence", value: "-80%", trend: "down" },
-                ],
-              },
-            ].map((benefit, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+            {[{
+            icon: TrendingUp,
+            iconBg: "bg-primary/10",
+            iconColor: "text-primary",
+            title: "Boost Revenue",
+            metrics: [{
+              label: "Table turnover",
+              value: "+25%",
+              trend: "up"
+            }, {
+              label: "Average order value",
+              value: "+20%",
+              trend: "up"
+            }]
+          }, {
+            icon: DollarSign,
+            iconBg: "bg-secondary/10",
+            iconColor: "text-secondary",
+            title: "Reduce Costs",
+            metrics: [{
+              label: "Ordering errors",
+              value: "-90%",
+              trend: "down"
+            }, {
+              label: "Menu printing costs",
+              value: "-100%",
+              trend: "down"
+            }]
+          }, {
+            icon: Star,
+            iconBg: "bg-accent/10",
+            iconColor: "text-accent",
+            title: "Enhance Experience",
+            metrics: [{
+              label: "Customer satisfaction",
+              value: "+35%",
+              trend: "up"
+            }, {
+              label: "Staff efficiency",
+              value: "+40%",
+              trend: "up"
+            }]
+          }, {
+            icon: Users,
+            iconBg: "bg-muted",
+            iconColor: "text-foreground",
+            title: "Own Your Customers",
+            metrics: [{
+              label: "Direct marketing list",
+              value: "100%",
+              trend: "up"
+            }, {
+              label: "Aggregator dependence",
+              value: "-80%",
+              trend: "down"
+            }]
+          }].map((benefit, i) => <div key={i} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 animate-fade-in" style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
                 <div className="flex items-start gap-6 mb-6">
                   <div className={`flex-shrink-0 w-16 h-16 rounded-2xl ${benefit.iconBg} flex items-center justify-center`}>
                     <benefit.icon className={`w-8 h-8 ${benefit.iconColor}`} />
@@ -596,22 +879,15 @@ export default function Home() {
                   <h3 className="text-3xl font-bold flex-1 pt-3">{benefit.title}</h3>
                 </div>
                 <div className="space-y-4">
-                  {benefit.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
+                  {benefit.metrics.map((metric, idx) => <div key={idx} className="flex items-center justify-between p-4 bg-white/5 rounded-xl border border-white/10">
                       <span className="text-lg text-white/90">{metric.label}</span>
                       <div className="flex items-center gap-2">
                         <span className="text-2xl font-bold">{metric.value}</span>
-                        {metric.trend === "up" ? (
-                          <ArrowUp className="w-5 h-5 text-green-400" />
-                        ) : (
-                          <ArrowDown className="w-5 h-5 text-green-400" />
-                        )}
+                        {metric.trend === "up" ? <ArrowUp className="w-5 h-5 text-green-400" /> : <ArrowDown className="w-5 h-5 text-green-400" />}
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center pt-8 mt-8 bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 animate-fade-in">
@@ -632,29 +908,25 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                icon: Users,
-                title: "Collaborative Order",
-                desc: "Multi-user ordering allows multiple people to scan the same code and add items to the shared table order simultaneously. Live tab syncs - the cart stays open until payment is finalized, guests can keep ordering rounds freely.",
-              },
-              {
-                icon: DollarSign,
-                title: "Flexible Payment",
-                desc: "Split bill functionality lets diners split the check by custom value or equal amounts instantly. Table lock finalizes the session, preventing further orders. Smart tipping with option to pay tip as % of total bill or custom value.",
-              },
-              {
-                icon: Bell,
-                title: "Order Fulfillment",
-                desc: "Waiters get instant notifications of new orders and can mark items as served with clear table status updates. Cashiers have live oversight to monitor all active orders, with payment control options to manually settle bills for cash payments.",
-              },
-              {
-                icon: LayoutGrid,
-                title: "Table & Menu Management",
-                desc: "Table management system with digital floor plan showing occupied tables, active orders, and payment status in real-time. Real-time menu updates for items, prices, and out-of-stock toggles. Analytics dashboard tracks sales, table turnover rates, and staff performance metrics.",
-              },
-            ].map((feature, i) => (
-              <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+            {[{
+            icon: Users,
+            title: "Collaborative Order",
+            desc: "Multi-user ordering allows multiple people to scan the same code and add items to the shared table order simultaneously. Live tab syncs - the cart stays open until payment is finalized, guests can keep ordering rounds freely."
+          }, {
+            icon: DollarSign,
+            title: "Flexible Payment",
+            desc: "Split bill functionality lets diners split the check by custom value or equal amounts instantly. Table lock finalizes the session, preventing further orders. Smart tipping with option to pay tip as % of total bill or custom value."
+          }, {
+            icon: Bell,
+            title: "Order Fulfillment",
+            desc: "Waiters get instant notifications of new orders and can mark items as served with clear table status updates. Cashiers have live oversight to monitor all active orders, with payment control options to manually settle bills for cash payments."
+          }, {
+            icon: LayoutGrid,
+            title: "Table & Menu Management",
+            desc: "Table management system with digital floor plan showing occupied tables, active orders, and payment status in real-time. Real-time menu updates for items, prices, and out-of-stock toggles. Analytics dashboard tracks sales, table turnover rates, and staff performance metrics."
+          }].map((feature, i) => <div key={i} className="group relative bg-card border border-border rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in" style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
                 <div className="flex items-start gap-6">
                   <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-hero flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -664,8 +936,7 @@ export default function Home() {
                     <p className="text-lg text-muted-foreground leading-relaxed">{feature.desc}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -733,21 +1004,12 @@ export default function Home() {
           <div className="bg-card border border-border rounded-3xl p-8 shadow-elegant">
             <div className="h-[600px] overflow-y-auto pr-4 custom-scrollbar">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                {allPOSSystems.map((pos, index) => (
-                  <div
-                    key={index}
-                    className="bg-background border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 min-h-[120px] hover:scale-105"
-                  >
-                    <img 
-                      src={pos.logo} 
-                      alt={`${pos.name} logo`}
-                      className="h-12 w-auto object-contain"
-                    />
+                {allPOSSystems.map((pos, index) => <div key={index} className="bg-background border border-border rounded-lg p-4 shadow-soft hover:shadow-elegant transition-all duration-300 flex flex-col items-center justify-center gap-3 min-h-[120px] hover:scale-105">
+                    <img src={pos.logo} alt={`${pos.name} logo`} className="h-12 w-auto object-contain" />
                     <h3 className="text-xs font-medium text-muted-foreground text-center">
                       {pos.name}
                     </h3>
-                  </div>
-                ))}
+                  </div>)}
                 <div className="bg-gradient-hero text-white rounded-lg p-4 shadow-soft flex flex-col items-center justify-center gap-3 min-h-[120px]">
                   <div className="text-3xl font-bold">+48</div>
                   <p className="text-xs text-center opacity-90">More Systems</p>
@@ -772,66 +1034,39 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {[
-              {
-                name: "Starter",
-                icon: Zap,
-                price: "2.5%",
-                subtitle: "per transaction",
-                description: "Perfect for small cafes and food trucks",
-                features: [
-                  "QR code ordering & payment",
-                  "Digital menu management",
-                  "Basic analytics",
-                  "Email support",
-                  "No monthly fee",
-                ],
-                cta: "Get Started",
-                popular: false,
-              },
-              {
-                name: "Growth",
-                icon: TrendingUp,
-                price: "1.9%",
-                subtitle: "per transaction + $99/mo",
-                description: "Adds advanced analytics and loyalty features",
-                features: [
-                  "Everything in Starter",
-                  "Advanced analytics dashboard",
-                  "Loyalty program integration",
-                  "Customization options",
-                  "Priority support",
-                  "Multi-location support",
-                ],
-                cta: "Start Free Trial",
-                popular: true,
-              },
-              {
-                name: "Enterprise",
-                icon: Building2,
-                price: "Custom",
-                subtitle: "tailored pricing",
-                description: "For multi-location chains with full integration",
-                features: [
-                  "Everything in Growth",
-                  "Full API access",
-                  "White-label options",
-                  "Dedicated account manager",
-                  "Custom integrations",
-                  "SLA guarantee",
-                ],
-                cta: "Contact Sales",
-                popular: false,
-              },
-            ].map((plan, i) => (
-              <div key={i} className={`relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in ${
-                plan.popular ? "border-2 border-primary ring-4 ring-primary/10" : "border border-border"
-              }`} style={{ animationDelay: `${i * 0.1}s` }}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
+            {[{
+            name: "Starter",
+            icon: Zap,
+            price: "2.5%",
+            subtitle: "per transaction",
+            description: "Perfect for small cafes and food trucks",
+            features: ["QR code ordering & payment", "Digital menu management", "Basic analytics", "Email support", "No monthly fee"],
+            cta: "Get Started",
+            popular: false
+          }, {
+            name: "Growth",
+            icon: TrendingUp,
+            price: "1.9%",
+            subtitle: "per transaction + $99/mo",
+            description: "Adds advanced analytics and loyalty features",
+            features: ["Everything in Starter", "Advanced analytics dashboard", "Loyalty program integration", "Customization options", "Priority support", "Multi-location support"],
+            cta: "Start Free Trial",
+            popular: true
+          }, {
+            name: "Enterprise",
+            icon: Building2,
+            price: "Custom",
+            subtitle: "tailored pricing",
+            description: "For multi-location chains with full integration",
+            features: ["Everything in Growth", "Full API access", "White-label options", "Dedicated account manager", "Custom integrations", "SLA guarantee"],
+            cta: "Contact Sales",
+            popular: false
+          }].map((plan, i) => <div key={i} className={`relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-elegant transition-all duration-300 animate-fade-in ${plan.popular ? "border-2 border-primary ring-4 ring-primary/10" : "border border-border"}`} style={{
+            animationDelay: `${i * 0.1}s`
+          }}>
+                {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-hero rounded-full text-white text-sm font-semibold shadow-lg">
                     Most Popular
-                  </div>
-                )}
+                  </div>}
 
                 <div className="space-y-6">
                   <div className={`w-14 h-14 rounded-2xl ${plan.popular ? 'bg-gradient-hero' : 'bg-muted'} flex items-center justify-center`}>
@@ -848,27 +1083,17 @@ export default function Home() {
                   </div>
 
                   <ul className="space-y-3">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
+                    {plan.features.map((feature, idx) => <li key={idx} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                         <span className="text-foreground">{feature}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
 
-                  <Button
-                    className={`w-full ${
-                      plan.popular
-                        ? "bg-gradient-hero text-white hover:opacity-90 shadow-lg"
-                        : "bg-secondary text-secondary-foreground"
-                    }`}
-                    size="lg"
-                  >
+                  <Button className={`w-full ${plan.popular ? "bg-gradient-hero text-white hover:opacity-90 shadow-lg" : "bg-secondary text-secondary-foreground"}`} size="lg">
                     {plan.cta}
                   </Button>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center pt-8 animate-fade-in">
@@ -894,9 +1119,7 @@ export default function Home() {
               
               <div className="relative z-10 space-y-8">
                 <div className="flex gap-1 justify-center">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 fill-current" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-6 h-6 fill-current" />)}
                 </div>
 
                 <blockquote className="text-2xl md:text-3xl leading-relaxed text-center font-light">
@@ -919,33 +1142,34 @@ export default function Home() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 pt-4">
-              {[
-                { stat: "30%", label: "Increase in turnover" },
-                { stat: "95%", label: "Server satisfaction" },
-                { stat: "4.8/5", label: "Customer rating" },
-              ].map((item, i) => (
-                <div key={i} className="bg-card border border-border rounded-xl p-6 text-center shadow-soft animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+              {[{
+              stat: "30%",
+              label: "Increase in turnover"
+            }, {
+              stat: "95%",
+              label: "Server satisfaction"
+            }, {
+              stat: "4.8/5",
+              label: "Customer rating"
+            }].map((item, i) => <div key={i} className="bg-card border border-border rounded-xl p-6 text-center shadow-soft animate-fade-in" style={{
+              animationDelay: `${i * 0.1}s`
+            }}>
                   <div className="text-4xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">
                     {item.stat}
                   </div>
                   <div className="text-muted-foreground">{item.label}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section 
-        id="cta" 
-        className="py-20 relative min-h-[600px] flex items-center justify-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${successImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+      <section id="cta" className="py-20 relative min-h-[600px] flex items-center justify-center" style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${successImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center"
+    }}>
         <div className="container mx-auto px-4 text-center text-white animate-fade-in">
           <div className="space-y-6 mb-12">
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
@@ -969,10 +1193,7 @@ export default function Home() {
               <p className="text-xl text-white/80 leading-relaxed mb-8">
                 See TapReserve.AI in action with a personalized walkthrough
               </p>
-              <Button
-                size="lg"
-                className="bg-white text-foreground hover:bg-white/90 shadow-elegant text-lg px-10 py-6 h-auto font-semibold"
-              >
+              <Button size="lg" className="bg-white text-foreground hover:bg-white/90 shadow-elegant text-lg px-10 py-6 h-auto font-semibold">
                 <Calendar className="w-5 h-5 mr-2" />
                 Schedule Demo Now
               </Button>
@@ -1016,11 +1237,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="h-16 overflow-hidden flex items-center mb-4">
-                <img 
-                  src={tapreserveLogo} 
-                  alt="TapReserve.AI" 
-                  className="h-[200%] w-auto object-contain"
-                />
+                <img src={tapreserveLogo} alt="TapReserve.AI" className="h-[200%] w-auto object-fill border-primary-foreground" />
               </div>
               <p className="text-muted-foreground">
                 Revolutionizing restaurant operations with intelligent self-ordering technology.
@@ -1029,9 +1246,15 @@ export default function Home() {
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><button onClick={() => document.getElementById('guest-experience')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">Guest Experience</button></li>
-                <li><button onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">Features</button></li>
-                <li><button onClick={() => document.getElementById('pos-integrations')?.scrollIntoView({ behavior: 'smooth' })} className="text-muted-foreground hover:text-foreground">POS Integrations</button></li>
+                <li><button onClick={() => document.getElementById('guest-experience')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="text-muted-foreground hover:text-foreground">Guest Experience</button></li>
+                <li><button onClick={() => document.getElementById('features')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="text-muted-foreground hover:text-foreground">Features</button></li>
+                <li><button onClick={() => document.getElementById('pos-integrations')?.scrollIntoView({
+                  behavior: 'smooth'
+                })} className="text-muted-foreground hover:text-foreground">POS Integrations</button></li>
                 <li><button onClick={() => window.location.href = '/presentation'} className="text-muted-foreground hover:text-foreground">View Presentation</button></li>
               </ul>
             </div>
@@ -1050,6 +1273,5 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 }

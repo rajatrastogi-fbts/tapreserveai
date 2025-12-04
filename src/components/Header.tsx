@@ -5,7 +5,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-center">
-          <div className="h-12 md:h-14 overflow-hidden flex items-center">
+          <div className="h-[58px] md:h-[68px] overflow-hidden flex items-center">
             <img 
               src={tapreserveLogo} 
               alt="TapReserve.AI" 

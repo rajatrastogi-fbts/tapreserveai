@@ -30,7 +30,7 @@ export default function QASlide() {
               <div className="text-3xl font-bold">hello@tapreserve.ai</div>
               <div className="text-xl">+1 (555) 123-4567</div>
               <div className="text-xl text-white/80 pt-4">
-                tapreserve.ai
+                Tapreserve.AI
               </div>
             </div>
           </div>

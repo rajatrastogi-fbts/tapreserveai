@@ -1089,9 +1089,12 @@ export default function Home() {
                       </li>)}
                   </ul>
 
-                  <Button className={`w-full ${plan.popular ? "bg-gradient-hero text-white hover:opacity-90 shadow-lg" : "bg-secondary text-secondary-foreground"}`} size="lg">
-                    {plan.cta}
+                  <Button asChild className={`w-full ${plan.popular ? "bg-gradient-hero text-white hover:opacity-90 shadow-lg" : "bg-secondary text-secondary-foreground"}`} size="lg">
+                    <a href={`mailto:rajat@storecomm.ai?subject=${encodeURIComponent(`TapReserve.AI enquiry — ${plan.name} plan`)}`}>
+                      {plan.cta}
+                    </a>
                   </Button>
+
                 </div>
               </div>)}
           </div>
@@ -1193,10 +1196,13 @@ export default function Home() {
               <p className="text-xl text-white/80 leading-relaxed mb-8">
                 See TapReserve.AI in action with a personalized walkthrough
               </p>
-              <Button size="lg" className="bg-white text-foreground hover:bg-white/90 shadow-elegant text-lg px-10 py-6 h-auto font-semibold">
-                <Calendar className="w-5 h-5 mr-2" />
-                Schedule Demo Now
+              <Button asChild size="lg" className="bg-white text-foreground hover:bg-white/90 shadow-elegant text-lg px-10 py-6 h-auto font-semibold">
+                <a href="mailto:rajat@storecomm.ai?subject=Schedule%20a%20TapReserve.AI%20Demo">
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Demo Now
+                </a>
               </Button>
+
             </div>
 
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6">
